@@ -1,0 +1,20 @@
+_title: end-of-line comment
+C:
+  body: |-
+    // comment
+C++:
+  body: |-
+    // comment
+Java:
+  body: |-
+    // comment
+JavaScript:
+  body: |-
+    // comment
+Perl:
+  body: |-
+    # comment
+PHP:
+  body: |-
+    // comment
+    # comment

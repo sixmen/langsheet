@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Language Sheet</title>
+  <link type='text/css' rel='stylesheet' href='index.css'>
+</head>
+
+<body>
+
+<table id='sheet'>
+  <thead>
+    {{#each languages}}
+    <th>{{this}}</th>
+    {{/each}}
+  </thead>
+  <tbody>
+    {{#each items}}
+    <tr>
+      {{#each ../languages}}
+      <td>
+        {{#getSheetContent ../this this}}
+          {{format this.body}}
+        {{/getSheetContent}}
+      </td>
+      {{/each}}
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+</body>
+
+</html>

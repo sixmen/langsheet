@@ -1,0 +1,9 @@
+{
+  "name": "LanguageSheet",
+  "version": "0.1.0",
+  "dependencies": {
+    "js-yaml": "",
+    "handlebars": ""
+  },
+  "license": "CC BY 3.0"
+}
