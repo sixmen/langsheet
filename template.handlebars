@@ -10,6 +10,7 @@
 
 <table id='sheet'>
   <thead>
+    <th></th>
     {{#each languages}}
     <th>{{this}}</th>
     {{/each}}
@@ -17,6 +18,11 @@
   <tbody>
     {{#each items}}
     <tr>
+      <td>
+        {{#getSheetContent this '_title'}}
+          {{format this}}
+        {{/getSheetContent}}
+      </td>
       {{#each ../languages}}
       <td>
         {{#getSheetContent ../this this}}
