@@ -1,0 +1,21 @@
+_title: swap
+C:
+  body: |-
+    // no special method
+C++:
+  body: |-
+    #include <algorithm>
+
+    std::swap(x, y);
+Java:
+  body: |-
+    // no special method
+JavaScript:
+  body: |-
+    x = [y, y = x][0];
+Perl:
+  body: |-
+    ($x, $y) = ($y, $x);
+PHP:
+  body: |-
+    list($x, $y) = array($y, $x);
