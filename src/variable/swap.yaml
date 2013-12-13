@@ -1,18 +1,21 @@
 _title: swap
 C:
   body: |-
-    // no special method
+    tmp = x;
+    x = y;
+    y = tmp;
 C++:
   body: |-
-    #include <algorithm>
-
+    \preproc{#include <algorithm>\}
     std::swap(x, y);
 Java:
   body: |-
-    // no special method
+    tmp = x;
+    x = y;
+    y = tmp;
 JavaScript:
   body: |-
-    x = [y, y = x][0];
+    x = [y, y = x][\number{0\}];
 Perl:
   body: |-
     ($x, $y) = ($y, $x);

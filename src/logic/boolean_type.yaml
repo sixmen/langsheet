@@ -1,13 +1,13 @@
 _title: boolean type
 C:
   body: |-
-    int
+    \keyword{int\}
 C++:
   body: |-
-    bool
+    \keyword{bool\}
 Java:
   body: |-
-    boolean
+    \keyword{boolean\}
 JavaScript:
   body:
 Perl:

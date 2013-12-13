@@ -1,32 +1,32 @@
 _title: hello world
 C:
   body: |-
-    #include <stdio.h>
-    int main(int argc, char **argv) {
-      printf("Hello, World!\n");
+    \preproc{#include <stdio.h>\}
+    \keyword{int\} main(\keyword{int\} argc, \keyword{char\} **argv) {
+      printf(\string{"Hello, World!\\n"\});
     }
 C++:
   body: |-
-    #include <iostream>
-    using namespace std;
-    int main(int argc, char **argv) {
-      cout << "Hello, World!" << endl;
+    \preproc{#include <iostream>\}
+    \keyword{using\} \keyword{namespace\} std;
+    \keyword{int\} main(\keyword{int\} argc, \keyword{char\} **argv) {
+      cout << \string{"Hello, World!"\} << endl;
     }
 Java:
   body: |-
-    public class Hello {
-      public static void main(String[] args) {
-        System.out.println("Hello, World!");
+    \keyword{public\} \keyword{class\} Hello {
+      \keyword{public\} \keyword{static\} \keyword{void\} main(String[] args) {
+        System.out.println(\string{"Hello, World!"\});
       }
     }
 JavaScript:
   body: |-
-    console.log('Hello, World!');
+    console.log(\string{'Hello, World!'\});
 Perl:
   body: |-
-    print "Hello, World!\n";
+    print \string{"Hello, World!\\n"\};
 PHP:
   body: |-
-    <?
-    echo "Hello, World!\n";
-    ?>
+    \preproc{<?\}
+    echo \string{"Hello, World!\\n"\};
+    \preproc{?>\}

@@ -1,20 +1,20 @@
 _title: end-of-line comment
 C:
   body: |-
-    // comment
+    \comment{// comment\}
 C++:
   body: |-
-    // comment
+    \comment{// comment\}
 Java:
   body: |-
-    // comment
+    \comment{// comment\}
 JavaScript:
   body: |-
-    // comment
+    \comment{// comment\}
 Perl:
   body: |-
-    # comment
+    \comment{# comment\}
 PHP:
   body: |-
-    // comment
-    # comment
+    \comment{// comment\}
+    \comment{# comment\}
