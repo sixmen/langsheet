@@ -1,0 +1,30 @@
+_title: concatenate
+C:
+  body: |-
+    \keyword{char\} *s1 = \string{"hello"\};
+    \keyword{char\} *s2 = \string{" world"\};
+    \keyword{char\} *s3 = (\keyword{char\} *)malloc(strlen(s1)
+        +strlen(s2)+1);
+    strcpy(s3, s1);
+    strcat(s3, s2);
+C++:
+  body: |-
+    string s1 = \string{"hello"\};
+
+    // destructive
+    string s2 = s1 + \string{" world"\};
+
+    // non-destructive
+    s1 += \string{" world"\};
+Java:
+  body: |-
+    \string{"hello"\} + \string{" world"\}
+JavaScript:
+  body: |-
+    \string{'hello'\} + \string{' world'\}
+Perl:
+  body: |-
+    \string{'hello'\} . \string{' world'\}
+PHP:
+  body: |-
+    \string{'hello'\} . \string{' world'\}

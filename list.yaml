@@ -8,3 +8,6 @@
 - title: logic
   items:
     - logic/boolean_type
+- title: string
+  items:
+    - string/concatenate
