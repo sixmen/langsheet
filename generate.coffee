@@ -4,18 +4,23 @@ fs = require 'fs'
 path = require 'path'
 
 sheet = {}
+groups = []
 languages = {}
 
-files = fs.readdirSync 'src'
-for file in files
-  content = require "./src/#{file}"
-  sheet[path.basename file, '.yaml'] = content
-  for item of content
-    continue if item[0] is '_'
-    languages[item] = 1
+list = require './list.yaml'
+for group in list
+  items = []
+  groups.push title: group.title, items: items
+  for item in group.items
+    content = require "./src/#{item}.yaml"
+    key = path.basename item
+    items.push key
+    sheet[key] = content
+    for lang of content
+      continue if lang[0] is '_'
+      languages[lang] = 1
 
 languages = Object.keys(languages).sort()
-items = Object.keys(sheet).sort()
 
 Handlebars.registerHelper 'getSheetContent', (item, language, options) ->
   content = sheet[item][language]
@@ -31,5 +36,5 @@ Handlebars.registerHelper 'format', (text, options) ->
   new Handlebars.SafeString text
 
 template = require './template.handlebars'
-genearated = template languages: languages, items: items
+genearated = template languages: languages, table_columns: languages.length+1, groups: groups
 fs.writeFileSync './gen/index.html', genearated, 'utf-8'

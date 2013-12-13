@@ -15,21 +15,25 @@
 </ul>
 
 <table id='sheet'>
-  <thead>
-    <th></th>
-    {{#each languages}}
-    <th>{{this}}</th>
-    {{/each}}
-  </thead>
+  {{#each groups}}
   <tbody>
+    <tr class='group_title'>
+      <td colspan='{{../table_columns}}'>{{title}}</td>
+    </tr>
+    <tr class='language_list'>
+      <td></td>
+      {{#each ../languages}}
+      <td>{{this}}</td>
+      {{/each}}
+    </tr>
     {{#each items}}
-    <tr>
+    <tr class='item'>
       {{#getSheetContent this '_title'}}
       <td class='{{this.cell_class}}'>
         {{format this}}
       </td>
       {{/getSheetContent}}
-      {{#each ../languages}}
+      {{#each ../../languages}}
       {{#getSheetContent ../this this}}
       <td class='{{this.cell_class}}'>
         {{format this.body}}
@@ -39,6 +43,7 @@
     </tr>
     {{/each}}
   </tbody>
+  {{/each}}
 </table>
 
 <script src='http://code.jquery.com/jquery-1.10.2.min.js' type='text/javascript'></script>
