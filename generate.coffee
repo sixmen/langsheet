@@ -18,7 +18,12 @@ languages = Object.keys(languages).sort()
 items = Object.keys(sheet).sort()
 
 Handlebars.registerHelper 'getSheetContent', (item, language, options) ->
-  options.fn sheet[item][language]
+  content = sheet[item][language]
+  if not content
+    content = cell_class: 'no_information'
+  else if not content.body
+    content.cell_class = 'not_applicable'
+  options.fn content
 Handlebars.registerHelper 'format', (text, options) ->
   text = Handlebars.Utils.escapeExpression text
   text = text.replace /\n/g, '<br>'

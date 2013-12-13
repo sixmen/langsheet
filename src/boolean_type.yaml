@@ -1,0 +1,16 @@
+_title: boolean type
+C:
+  body: |-
+    int
+C++:
+  body: |-
+    bool
+Java:
+  body: |-
+    boolean
+JavaScript:
+  body:
+Perl:
+  body:
+PHP:
+  body:

@@ -24,17 +24,17 @@
   <tbody>
     {{#each items}}
     <tr>
-      <td>
-        {{#getSheetContent this '_title'}}
-          {{format this}}
-        {{/getSheetContent}}
+      {{#getSheetContent this '_title'}}
+      <td class='{{this.cell_class}}'>
+        {{format this}}
       </td>
+      {{/getSheetContent}}
       {{#each ../languages}}
-      <td>
-        {{#getSheetContent ../this this}}
-          {{format this.body}}
-        {{/getSheetContent}}
+      {{#getSheetContent ../this this}}
+      <td class='{{this.cell_class}}'>
+        {{format this.body}}
       </td>
+      {{/getSheetContent}}
       {{/each}}
     </tr>
     {{/each}}
