@@ -22,6 +22,8 @@ Java:
 JavaScript:
   body: |-
     console.log(\string{'Hello, World!'\});
+  note: |-
+    'console.log' is for client-side(i.e. browser) JavaScript and Node.js.
 Perl:
   body: |-
     print \string{"Hello, World!\\n"\};
