@@ -1,0 +1,25 @@
+_title: block comment
+C:
+  body: |-
+    \comment{/* comment */\}
+C++:
+  body: |-
+    \comment{/* comment */\}
+Java:
+  body: |-
+    \comment{/* comment */\}
+JavaScript:
+  body: |-
+    \comment{/* comment */\}
+Perl:
+  body: |-
+    \comment{=pod
+    comment
+    =cut\}
+  note: |-
+    The POD(Plain Old Documentation) format is originally for documentation,
+    but can be used for comments.
+    '=' must be the first character of a line.
+PHP:
+  body: |-
+    \comment{/* comment */\}
