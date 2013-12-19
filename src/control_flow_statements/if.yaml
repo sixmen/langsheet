@@ -1,0 +1,55 @@
+_title: if
+C:
+  body: |-
+    \keyword{if\} (a<b) {
+      order = \number{-1\};
+    } \keyword{else\} \keyword{if\} (a==b) {
+      order = \number{0\};
+    } \keyword{else\} {
+      order = \number{1\};
+    }
+C++:
+  body: |-
+    \keyword{if\} (a<b) {
+      order = \number{-1\};
+    } \keyword{else\} \keyword{if\} (a==b) {
+      order = \number{0\};
+    } \keyword{else\} {
+      order = \number{1\};
+    }
+Java:
+  body: |-
+    \keyword{if\} (a<b) {
+      order = \number{-1\};
+    } \keyword{else\} \keyword{if\} (a==b) {
+      order = \number{0\};
+    } \keyword{else\} {
+      order = \number{1\};
+    }
+JavaScript:
+  body: |-
+    \keyword{if\} (a<b) {
+      order = \number{-1\};
+    } \keyword{else\} \keyword{if\} (a==b) {
+      order = \number{0\};
+    } \keyword{else\} {
+      order = \number{1\};
+    }
+Perl:
+  body: |-
+    \keyword{if\} ($a<$b) {
+      $order = \number{-1\};
+    } \keyword{elsif\} ($a==$b) {
+      $order = \number{0\};
+    } \keyword{else\} {
+      $order = \number{1\};
+    }
+PHP:
+  body: |-
+    \keyword{if\} ($a<$b) {
+      $order = \number{-1\};
+    } \keyword{elseif\} ($a==$b) {
+      $order = \number{0\};
+    } \keyword{else\} {
+      $order = \number{1\};
+    }

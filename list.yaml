@@ -13,3 +13,9 @@
 - title: string
   items:
     - string/concatenate
+- title: control flow statements
+  items:
+    - control_flow_statements/if
+- title: resizable arrays
+  items:
+    - resizable_arrays/create

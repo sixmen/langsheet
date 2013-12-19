@@ -1,0 +1,26 @@
+_title: create
+C:
+  body: |-
+C++:
+  body: |-
+    \preproc{#include <vector>\}
+    std::vector<\keyword{int\}> a;
+Java:
+  body: |-
+    \keyword{import\} java.util.ArrayList;
+    ArrayList a = new ArrayList();
+
+    \comment{// legacy class(slow due to synchronization)\}
+    \keyword{import\} java.util.Vector;
+    Vector a = new Vector();
+JavaScript:
+  body: |-
+    a = new Array();
+    a = [];
+Perl:
+  body: |-
+    @a = ();
+PHP:
+  body: |-
+    $a = array();
+    $a = [];
