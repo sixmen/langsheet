@@ -4,6 +4,7 @@ C:
     \preproc{#include <stdio.h>\}
     \keyword{int\} main(\keyword{int\} argc, \keyword{char\} **argv) {
       printf(\string{"Hello, World!\\n"\});
+      \keyword{return\} \number{0\};
     }
 C++:
   body: |-
@@ -11,7 +12,11 @@ C++:
     \keyword{using\} \keyword{namespace\} std;
     \keyword{int\} main(\keyword{int\} argc, \keyword{char\} **argv) {
       cout << \string{"Hello, World!"\} << endl;
+      \keyword{return\} \number{0\};
     }
+CoffeeScript:
+  body: |-
+    console.log \string{'Hello, World!'\}
 Java:
   body: |-
     \keyword{public\} \keyword{class\} Hello {
@@ -24,11 +29,30 @@ JavaScript:
     console.log(\string{'Hello, World!'\});
   note: |-
     'console.log' is for client-side(i.e. browser) JavaScript and Node.js.
+Lua:
+  body: |-
+    \keyword{print\}(\string{'Hello, World!'\})
+Objective-C:
+  body: |-
+    \preproc{#import <Foundation/Foundation.h>\}
+    \keyword{int\} main(\keyword{int\} argc, \keyword{char\} **argv) {
+      NSLog(\string{@"Hello, World!"\});
+      \keyword{return\} \number{0\};
+    }
+OCaml:
+  body: |-
+    \keyword{print_endline\} \string{"Hello, World!"\};;
 Perl:
   body: |-
-    print \string{"Hello, World!\\n"\};
+    \keyword{print\} \string{"Hello, World!\\n"\};
 PHP:
   body: |-
     \preproc{<?\}
-    echo \string{"Hello, World!\\n"\};
+    \keyword{echo\} \string{"Hello, World!\\n"\};
     \preproc{?>\}
+Python:
+  body: |-
+    \keyword{print\} \string{'Hello, World!'\}
+Scheme:
+  body: |-
+    (\keyword{display\} \string{"Hello, World!\\n"\})
