@@ -37,11 +37,11 @@
       {{/getSheetContent}}
       {{#each ../../languages}}
       {{#getSheetContent ../this this}}
-      <td class='{{this.cell_class}}'>
-        {{#if this.note}}
-        <div class='item_note' title='{{this.note}}'><span class='glyphicon glyphicon-comment'></span></div>
-        {{/if}}
+      <td class='{{this.cell_class}}'{{#if this.note}} title='{{this.note}}'{{/if}}>
         {{format this.body}}
+        {{#if this.note}}
+        <div><span class='glyphicon glyphicon-comment'></span></div>
+        {{/if}}
       </td>
       {{/getSheetContent}}
       {{/each}}

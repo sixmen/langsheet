@@ -23,11 +23,16 @@ for group in list
 languages = Object.keys(languages).sort()
 
 Handlebars.registerHelper 'getSheetContent', (item, language, options) ->
+  cell_class = []
   content = sheet[item][language]
   if not content
-    content = cell_class: 'no_information'
+    content = {}
+    cell_class.push 'no_information'
   else if not content.body
-    content.cell_class = 'not_applicable'
+    cell_class.push 'not_applicable'
+  if content.note
+    cell_class.push 'item_note'
+  content.cell_class = cell_class.join ' '
   options.fn content
 Handlebars.registerHelper 'format', (text, options) ->
   result = ''
