@@ -13,6 +13,10 @@
 - title: string
   items:
     - string/concatenate
+- title: function
+  items:
+    - function/define
+    - function/invoke
 - title: control flow statements
   items:
     - control_flow_statements/if

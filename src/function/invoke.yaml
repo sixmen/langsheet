@@ -1,0 +1,17 @@
+_title: invoke function
+C:
+  body: |-
+    sum(\number{1\}, \number{2\}, \number{3\});
+C++:
+  body: |-
+    sum(\number{1\}, \number{2\}, \number{3\});
+CoffeeScript:
+  body: |-
+    sum \number{1\}, \number{2\}, \number{3\}
+    sum(\number{1\}, \number{2\}, \number{3\})
+JavaScript:
+  body: |-
+    sum(\number{1\}, \number{2\}, \number{3\});
+Python:
+  body: |-
+    sum(\number{1\}, \number{2\}, \number{3\})

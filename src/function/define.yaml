@@ -1,0 +1,28 @@
+_title: define function
+C:
+  body: |-
+    \keyword{int\} sum(\keyword{int\} x, \keyword{int\} y, \keyword{int\} z) {
+      \keyword{return\} x + y + z;
+    }
+C++:
+  body: |-
+    \keyword{int\} sum(\keyword{int\} x, \keyword{int\} y, \keyword{int\} z) {
+      \keyword{return\} x + y + z;
+    }
+CoffeeScript:
+  body: |-
+    sum = (x, y, z) ->
+      x + y + z
+JavaScript:
+  body: |-
+    \keyword{function\} sum(x, y, z) {
+      \keyword{return\} x + y + z;
+    }
+
+    \keyword{var\} sum = \keyword{function\} (x, y, z) {
+      \keyword{return\} x + y + z;
+    };
+Python:
+  body: |-
+    \keyword{def\} sum(x, y, z):
+      \keyword{return\} x + y + z
