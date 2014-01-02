@@ -30,8 +30,8 @@
     {{#each items}}
     <tr class='item'>
       {{#getSheetContent this '_title'}}
-      <td class='{{this.cell_class}}'>
-        {{format this}}
+      <td class='{{this.cell_class}}'{{#if this.note}} title='{{this.note}}'{{/if}}>
+        {{this.body}}
       </td>
       {{/getSheetContent}}
       {{#each ../../languages}}

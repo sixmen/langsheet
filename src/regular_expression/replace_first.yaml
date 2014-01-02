@@ -1,4 +1,6 @@
 _title: replace first
+_note: |-
+  `consonants` will be "hllo".
 Java:
   body: |-
     String consonants = \string{"hello"\}.replaceFirst(\string{"[aeiou]"\}, \string{""\});

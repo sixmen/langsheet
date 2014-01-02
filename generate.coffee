@@ -24,7 +24,11 @@ languages = Object.keys(languages).sort()
 
 Handlebars.registerHelper 'getSheetContent', (item, language, options) ->
   cell_class = []
-  content = sheet[item][language]
+  if language is '_title'
+    content.body = sheet[item]._title
+    content.note = sheet[item]._note
+  else
+    content = sheet[item][language]
   if not content
     content = {}
     cell_class.push 'no_information'

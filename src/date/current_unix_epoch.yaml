@@ -1,4 +1,6 @@
 _title: current date from Unix epoch in seconds
+_note: |-
+  The Unix epoch is the time 00:00:00 UTC on 1 January 1970.
 Java:
   body: |-
     \keyword{long\} current = System.currentTimeMillis() / \number{1000\};

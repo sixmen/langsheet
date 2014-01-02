@@ -1,4 +1,6 @@
 _title: replace all
+_note: |-
+  `consonants` will be "hll".
 Java:
   body: |-
     String consonants = \string{"hello"\}.replaceAll(\string{"[aeiou]"\}, \string{""\});
