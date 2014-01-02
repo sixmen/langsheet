@@ -17,9 +17,9 @@
   items:
     - function/define
     - function/invoke
-- title: control flow statements
+- title: control flow statement
   items:
-    - control_flow_statements/if
-- title: resizable arrays
+    - control_flow_statement/if
+- title: resizable array
   items:
-    - resizable_arrays/create
+    - resizable_array/create
