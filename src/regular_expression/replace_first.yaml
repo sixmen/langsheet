@@ -1,0 +1,7 @@
+_title: replace first
+Java:
+  body: |-
+    String consonants = \string{"hello"\}.replaceFirst(\string{"[aeiou]"\}, \string{""\});
+
+    \keyword{import\} java.util.regex.Pattern;
+    String consonants = Pattern.compile(\string{"[aeiou]"\}).matcher(\string{"hello"\}).replaceFirst(\string{""\});

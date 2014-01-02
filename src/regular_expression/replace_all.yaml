@@ -1,0 +1,7 @@
+_title: replace all
+Java:
+  body: |-
+    String consonants = \string{"hello"\}.replaceAll(\string{"[aeiou]"\}, \string{""\});
+
+    \keyword{import\} java.util.regex.Pattern;
+    String consonants = Pattern.compile(\string{"[aeiou]"\}).matcher(\string{"hello"\}).replaceAll(\string{""\});

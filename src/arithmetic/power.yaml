@@ -1,0 +1,4 @@
+_title: power
+Java:
+  body: |-
+    Math.pow(\number{2.5\}, \number{13.2\});

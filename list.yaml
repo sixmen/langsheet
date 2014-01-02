@@ -7,6 +7,10 @@
 - title: variable
   items:
     - variable/swap
+- title: arithmetic
+  items:
+    - arithmetic/power
+    - arithmetic/square_root
 - title: logic
   items:
     - logic/boolean_type
@@ -23,3 +27,10 @@
 - title: resizable array
   items:
     - resizable_array/create
+- title: regular expression
+  items:
+    - regular_expression/replace_first
+    - regular_expression/replace_all
+- title: date
+  items:
+    - date/current_unix_epoch

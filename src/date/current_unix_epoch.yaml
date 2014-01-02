@@ -1,0 +1,7 @@
+_title: current date from Unix epoch in seconds
+Java:
+  body: |-
+    \keyword{long\} current = System.currentTimeMillis() / \number{1000\};
+
+    \keyword{import\} java.util.Date;
+    \keyword{long\} current = \keyword{new\} Date().getTime() / \number{1000\};

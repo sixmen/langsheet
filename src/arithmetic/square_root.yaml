@@ -1,0 +1,4 @@
+_title: square root
+Java:
+  body: |-
+    Math.sqrt(\number{1.69\});
