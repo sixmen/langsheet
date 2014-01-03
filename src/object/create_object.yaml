@@ -1,0 +1,4 @@
+_title: create object
+Java:
+  body: |-
+    Shape2D s = \keyword{new\} Shape2D(\number{5\}, \number{3\});

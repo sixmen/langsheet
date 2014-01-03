@@ -1,0 +1,10 @@
+_title: subclass
+Java:
+  body: |-
+    \keyword{public\} \keyword{class\} Circle \keyword{extends\} Shape2D {
+      \keyword{private\} \keyword{double\} radius;
+      \keyword{public\} Circle(\keyword{double\} x, \keyword{double\} y, \keyword{double\} radius) {
+        \keyword{super\}(x, y);
+        \keyword{this\}.radius = radius;
+      }
+    }

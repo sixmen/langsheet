@@ -36,3 +36,10 @@
 - title: date
   items:
     - date/current_unix_epoch
+- title: object-oriented programming
+  items:
+    - object/define_class
+    - object/create_object
+    - object/invoke_method
+    - object/subclass
+    - object/root_class

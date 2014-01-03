@@ -1,0 +1,4 @@
+_title: invoke method
+Java:
+  body: |-
+    s.move(\number{2\}, \number{4\});

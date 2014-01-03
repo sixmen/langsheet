@@ -1,0 +1,15 @@
+_title: define class
+Java:
+  body: |-
+    \keyword{public\} \keyword{class\} Shape2D {
+      \keyword{private\} \keyword{double\} x;
+      \keyword{private\} \keyword{double\} y;
+      \keyword{public\} Shape2D(\keyword{double\} x, \keyword{double\} y) {
+        this.x = x;
+        this.y = y;
+      }
+      \keyword{public\} \keyword{void\} move(\keyword{double\} dx, \keyword{double\} dy) {
+        x += dx;
+        y += dy;
+      }
+    }
