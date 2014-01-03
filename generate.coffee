@@ -30,9 +30,10 @@ Handlebars.registerHelper 'getSheetContent', (item, language, options) ->
   else
     content = sheet[item][language]
   if not content
-    content = {}
+    content = body: 'Need to fill'
     cell_class.push 'no_information'
   else if not content.body
+    content.body = 'Not applicable\nto this language'
     cell_class.push 'not_applicable'
   if content.note
     cell_class.push 'item_note'
