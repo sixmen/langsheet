@@ -5,6 +5,11 @@ C++:
   body: |-
     \preproc{#include <vector>\}
     std::vector<\keyword{int\}> a;
+CoffeeScript:
+  body: |-
+    a = new Array()
+    \hr{\}
+    a = []
 Java:
   body: |-
     \keyword{import\} java.util.ArrayList;

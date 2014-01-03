@@ -30,6 +30,7 @@
 - title: resizable array
   items:
     - resizable_array/create
+    - resizable_array/create_with_values
 - title: regular expression
   items:
     - regular_expression/replace_first

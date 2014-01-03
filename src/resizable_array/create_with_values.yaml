@@ -1,0 +1,17 @@
+_title: create with values
+CoffeeScript:
+  body: |-
+    a = new Array(1, 2, 3)
+    \hr{\}
+    a = [1, 2, 3]
+  note: |-
+    Caution: 'new Array(3)' is different from '[3]'.
+Java:
+  body: |-
+JavaScript:
+  body: |-
+    a = new Array(1, 2, 3);
+    \hr{\}
+    a = [1, 2, 3];
+  note: |-
+    Caution: 'new Array(3)' is different from '[3]'.
