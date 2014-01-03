@@ -1,0 +1,4 @@
+_title: trim
+Java:
+  body: |-
+    \string{" hello "\}.trim();

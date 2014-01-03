@@ -1,0 +1,5 @@
+_title: convert case
+Java:
+  body: |-
+    \string{"hello"\}.toUpperCase();
+    \string{"HELLO"\}.toLowerCase();

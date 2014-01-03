@@ -17,6 +17,8 @@
 - title: string
   items:
     - string/concatenate
+    - string/convert_case
+    - string/trim
 - title: function
   items:
     - function/define
