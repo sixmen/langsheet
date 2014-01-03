@@ -23,6 +23,7 @@
   items:
     - function/define
     - function/invoke
+    - function/default_argument
 - title: control flow statement
   items:
     - control_flow_statement/if

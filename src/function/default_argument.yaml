@@ -1,0 +1,23 @@
+_title: default argument
+CoffeeScript:
+  body: |-
+    logarithm = (x, base=\number{10\}) ->
+      Math.log(x) / Math.log(base)
+Java:
+  body: |-
+    \keyword{double\} logarithm(\keyword{double\} x) {
+      \keyword{return\} logarithm(x, \number{10\});
+    }
+    \keyword{double\} logarithm(\keyword{double\} x, \keyword{double\} base) {
+      \keyword{return\} Math.log(x) / Math.log(base);
+    }
+  note: |-
+    use method overloading
+JavaScript:
+  body: |-
+    \keyword{function\} logarithm(x, base) {
+      \keyword{if\} (base==\keyword{null\}) {
+        base = \number{10\};
+      }
+      \keyword{return\} Math.log(x) / Math.log(base);
+    }
