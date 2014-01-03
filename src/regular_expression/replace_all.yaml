@@ -4,6 +4,6 @@ _note: |-
 Java:
   body: |-
     String consonants = \string{"hello"\}.replaceAll(\string{"[aeiou]"\}, \string{""\});
-
+    \hr{\}
     \keyword{import\} java.util.regex.Pattern;
     String consonants = Pattern.compile(\string{"[aeiou]"\}).matcher(\string{"hello"\}).replaceAll(\string{""\});

@@ -18,7 +18,7 @@ JavaScript:
     \keyword{function\} sum(x, y, z) {
       \keyword{return\} x + y + z;
     }
-
+    \hr{\}
     \keyword{var\} sum = \keyword{function\} (x, y, z) {
       \keyword{return\} x + y + z;
     };

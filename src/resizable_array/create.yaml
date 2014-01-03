@@ -9,13 +9,14 @@ Java:
   body: |-
     \keyword{import\} java.util.ArrayList;
     ArrayList a = new ArrayList();
-
+    \hr{\}
     \comment{// legacy class(slow due to synchronization)\}
     \keyword{import\} java.util.Vector;
     Vector a = new Vector();
 JavaScript:
   body: |-
     a = new Array();
+    \hr{\}
     a = [];
 Perl:
   body: |-
@@ -23,4 +24,5 @@ Perl:
 PHP:
   body: |-
     $a = array();
+    \hr{\}
     $a = [];

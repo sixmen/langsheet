@@ -17,4 +17,5 @@ Perl:
 PHP:
   body: |-
     \comment{// comment\}
+    \hr{\}
     \comment{# comment\}
