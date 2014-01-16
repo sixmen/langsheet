@@ -11,10 +11,10 @@ C++:
   body: |-
     string s1 = \string{"hello"\};
 
-    // destructive
+    // non-destructive
     string s2 = s1 + \string{" world"\};
 
-    // non-destructive
+    // destructive
     s1 += \string{" world"\};
 Java:
   body: |-
