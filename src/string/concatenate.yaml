@@ -9,19 +9,28 @@ C:
     strcat(s3, s2);
 C++:
   body: |-
-    string s1 = \string{"hello"\};
-
-    // non-destructive
-    string s2 = s1 + \string{" world"\};
-
     // destructive
+    string s1 = \string{"hello"\};
     s1 += \string{" world"\};
+    \hr{\}
+    // non-destructive
+    string s1 = \string{"hello"\};
+    string s2 = s1 + \string{" world"\};
 Java:
   body: |-
     \string{"hello"\} + \string{" world"\}
 JavaScript:
   body: |-
     \string{'hello'\} + \string{' world'\}
+Objective-C:
+  body: |-
+    // destructive
+    NSMutableString *s1 = [\string{@"hello"\} mutableCopy];
+    [s1 appendString:\string{@" world"\}];
+    \hr{\}
+    // non-destructive
+    NSString *s1 = \string{@"hello"\};
+    NSString *s2 = [s1 stringByAppendingString:\string{@" world"\}];
 Perl:
   body: |-
     \string{'hello'\} . \string{' world'\}

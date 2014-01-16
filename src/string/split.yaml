@@ -1,0 +1,3 @@
+Objective-C:
+  body: |-
+    [\string{@"a,b,c"\} componentsSeparatedByString:\string{@","\}];

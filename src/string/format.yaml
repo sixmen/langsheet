@@ -1,0 +1,4 @@
+_title: format string
+Objective-C:
+  body: |-
+    [NSString stringWithFormat:\string{@"str-%@, int-%d, num-%f"\}, \string{@"Lang"\}, \number{5\}, \number{9.4\}];

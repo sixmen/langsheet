@@ -2,3 +2,6 @@ _title: trim
 Java:
   body: |-
     \string{" hello "\}.trim();
+Objective-C:
+  body: |-
+    [\string{@" hello "\} stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];

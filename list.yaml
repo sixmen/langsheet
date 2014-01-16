@@ -19,6 +19,9 @@
     - string/concatenate
     - string/convert_case
     - string/trim
+    - string/format
+    - string/join
+    - string/split
 - title: function
   items:
     - function/define

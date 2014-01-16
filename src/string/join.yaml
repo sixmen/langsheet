@@ -1,0 +1,5 @@
+_title: join
+Objective-C:
+  body: |-
+    NSArray *a = @[\string{@"a"\}, \string{@"b"\}, \string{@"c"\}];
+    [a componentsJoinedByString:\string{@","\}];
