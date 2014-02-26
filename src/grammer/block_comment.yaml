@@ -5,6 +5,11 @@ C:
 C++:
   body: |-
     \comment{/* comment */\}
+CoffeeScript:
+  body: |-
+    \comment{###
+    comment
+    ###\}
 Java:
   body: |-
     \comment{/* comment */\}
