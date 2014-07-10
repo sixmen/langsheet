@@ -1,0 +1,42 @@
+_title: extensions
+C:
+  body: |-
+    .c - source
+    .h - header
+C++:
+  body: |-
+    .cpp, .cc, .C, .cxx - source
+    .h, .hpp, .hh, .H, .hxx - header
+CoffeeScript:
+  body: |-
+    .coffee, .litcoffee
+Java:
+  body: |-
+    .java - source
+    .class - compiled object
+JavaScript:
+  body: |-
+    .js
+Lua:
+  body: |-
+    .lua
+Objective-C:
+  body: |-
+    .m - source
+    .mm - source with C++
+    .h - header
+OCaml:
+  body: |-
+    .ml
+Perl:
+  body: |-
+    .pl
+PHP:
+  body: |-
+    .php
+Python:
+  body: |-
+    .py
+Scheme:
+  body: |-
+    .scm

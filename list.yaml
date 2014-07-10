@@ -1,6 +1,7 @@
 - title: grammer
   items:
     - grammer/hello_world
+    - grammer/extensions
     - grammer/block_delimiters
     - grammer/end_of_line_comment
     - grammer/block_comment
