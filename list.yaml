@@ -9,6 +9,7 @@
     - syntax/block_comment
 - title: variable
   items:
+    - variable/assignment
     - variable/swap
 - title: arithmetic
   items:

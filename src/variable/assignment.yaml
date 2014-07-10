@@ -1,0 +1,28 @@
+_title: assignment
+C:
+  body: |-
+    a = \number{7\};
+C++:
+  body: |-
+    a = \number{7\};
+CoffeeScript:
+  body: |-
+    a = \number{7\}
+Java:
+  body: |-
+    a = \number{7\};
+JavaScript:
+  body: |-
+    a = \number{7\};
+Objective-C:
+  body: |-
+    a = \number{7\};
+Perl:
+  body: |-
+    $a = \number{7\};
+PHP:
+  body: |-
+    $a = \number{7\};
+Python:
+  body: |-
+    a = \number{7\}
