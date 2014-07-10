@@ -1,11 +1,11 @@
-- title: grammer
+- title: syntax
   items:
-    - grammer/hello_world
-    - grammer/extensions
-    - grammer/block_delimiters
-    - grammer/statement_terminator
-    - grammer/end_of_line_comment
-    - grammer/block_comment
+    - syntax/hello_world
+    - syntax/extensions
+    - syntax/block_delimiters
+    - syntax/statement_terminator
+    - syntax/end_of_line_comment
+    - syntax/block_comment
 - title: variable
   items:
     - variable/swap
