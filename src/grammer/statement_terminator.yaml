@@ -1,0 +1,37 @@
+_title: statement terminator
+C:
+  body: |-
+    semicolon
+C++:
+  body: |-
+    semicolon
+CoffeeScript:
+  body: |-
+    newline
+Java:
+  body: |-
+    semicolon
+JavaScript:
+  body: |-
+    semicolon, but sometimes optional
+Lua:
+  body: |-
+    newline or semicolon
+Objective-C:
+  body: |-
+    semicolon
+OCaml:
+  body: |-
+    double semicolon
+Perl:
+  body: |-
+    semicolon
+PHP:
+  body: |-
+    semicolon
+Python:
+  body: |-
+    newline
+Scheme:
+  body: |-
+    parenthesis matching

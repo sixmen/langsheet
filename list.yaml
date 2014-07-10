@@ -3,6 +3,7 @@
     - grammer/hello_world
     - grammer/extensions
     - grammer/block_delimiters
+    - grammer/statement_terminator
     - grammer/end_of_line_comment
     - grammer/block_comment
 - title: variable
