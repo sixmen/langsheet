@@ -5,10 +5,16 @@ C:
 C++:
   body: |-
     {}
+CoffeeScript:
+  body: |-
+    indentation
 Java:
   body: |-
     {}
 JavaScript:
+  body: |-
+    {}
+Objective-C:
   body: |-
     {}
 Perl:
@@ -17,3 +23,9 @@ Perl:
 PHP:
   body: |-
     {}
+Python:
+  body: |-
+    indentation
+Scheme:
+  body: |-
+    parentheses

@@ -1,0 +1,20 @@
+_title: import file/module
+C:
+  body: |-
+    \preproc{#include <filename>\}
+    \hr{\}
+    \preproc{#include "filename"\}
+C++:
+  body: |-
+    \preproc{#include <filename>\}
+    \hr{\}
+    \preproc{#include "filename"\}
+CoffeeScript:
+  body: |-
+Java:
+  body: |-
+    \keyword{import\} packagename.classname;
+    \hr{\}
+    \keyword{import\} packagename.*;
+JavaScript:
+  body: |-

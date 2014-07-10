@@ -4,6 +4,7 @@
     - syntax/extensions
     - syntax/block_delimiters
     - syntax/statement_terminator
+    - syntax/import
     - syntax/end_of_line_comment
     - syntax/block_comment
 - title: variable
