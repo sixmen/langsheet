@@ -1,4 +1,4 @@
-require 'js-yaml'
+yaml = require 'js-yaml'
 Handlebars = require 'handlebars'
 fs = require 'fs'
 path = require 'path'
@@ -7,12 +7,12 @@ sheet = {}
 groups = []
 languages = {}
 
-list = require './list.yaml'
+list = yaml.safeLoad fs.readFileSync 'list.yaml', 'utf-8'
 for group in list
   items = []
   groups.push title: group.title, items: items
   for item in group.items
-    content = require "./src/#{item}.yaml"
+    content = yaml.safeLoad fs.readFileSync "src/#{item}.yaml", 'utf-8'
     key = path.basename item
     items.push key
     sheet[key] = content
