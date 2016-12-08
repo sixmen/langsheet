@@ -29,7 +29,14 @@ for group in list
       continue if lang[0] is '_'
       languages[lang] = 1
 
-languages = Object.keys(languages).sort()
+languages = Object.keys(languages).sort (a, b) ->
+  a = a.toLowerCase()
+  b = b.toLowerCase()
+  if a < b
+    return -1
+  if a > b
+    return 1
+  return 0
 
 getSheetContent = (item, language, options) ->
   cell_class = []
