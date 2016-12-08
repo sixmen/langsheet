@@ -7,7 +7,16 @@ sheet = {}
 groups = []
 languages = {}
 
-list = yaml.safeLoad fs.readFileSync 'list.yaml', 'utf-8'
+if process.argv.length > 2
+  generate_single_item = true
+  item = process.argv[2]
+  if item.startsWith 'src/'
+    item = item.substr 4
+  if item.endsWith '.yaml'
+    item = item.substr 0, item.length-5
+  list = [ {title: item, items: [item]} ]
+else
+  list = yaml.safeLoad fs.readFileSync 'list.yaml', 'utf-8'
 for group in list
   items = []
   groups.push title: group.title, items: items
@@ -22,7 +31,7 @@ for group in list
 
 languages = Object.keys(languages).sort()
 
-Handlebars.registerHelper 'getSheetContent', (item, language, options) ->
+getSheetContent = (item, language, options) ->
   cell_class = []
   if language is '_title'
     content.body = sheet[item]._title
@@ -39,7 +48,8 @@ Handlebars.registerHelper 'getSheetContent', (item, language, options) ->
     cell_class.push 'item_note'
   content.cell_class = cell_class.join ' '
   options.fn content
-Handlebars.registerHelper 'format', (text, options) ->
+
+formatCode = (text, options) ->
   result = ''
   in_command = false
   command = ''
@@ -73,6 +83,24 @@ Handlebars.registerHelper 'format', (text, options) ->
         result += ch
   new Handlebars.SafeString result
 
-template = require './template.handlebars'
-genearated = template languages: languages, table_columns: languages.length+1, groups: groups
-fs.writeFileSync './gen/index.html', genearated, 'utf-8'
+if generate_single_item
+  console.log "<div class='langsheet'>"
+  console.log ""
+  for language in languages
+    getSheetContent groups[0].items[0], language, fn: (content) ->
+      body = formatCode(content.body).string
+      console.log "<div class='panel panel-info'>"
+      console.log "  <div class='panel-heading'>#{language}</div>"
+      console.log "  <div class='panel-body'>"
+      console.log "    #{body}"
+      console.log "  </div>"
+      console.log "</div>"
+      console.log ""
+  console.log "</div>"
+else
+  Handlebars.registerHelper 'getSheetContent', getSheetContent
+  Handlebars.registerHelper 'format', formatCode
+
+  template = require './template.handlebars'
+  genearated = template languages: languages, table_columns: languages.length+1, groups: groups
+  fs.writeFileSync './gen/index.html', genearated, 'utf-8'
