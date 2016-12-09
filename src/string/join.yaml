@@ -1,5 +1,90 @@
-_title: join
+_title: join a string array
+C:
+  body: |-
+    \keyword{const\} \keyword{char\} *\keyword{const\} strs[] = {\string{"one"\}, \string{"two"\}, \string{"three"\}};
+    \keyword{int\} i = \number{0\};
+    \keyword{int\} size = \number{0\};
+    \keyword{char\} *out;
+    \keyword{for\} (i=\number{0\};i<\number{3\};i++) {
+      size += \stdlib{strlen\}(strs[i]) + \number{1\};
+    }
+    out = (\keyword{char\} *)\stdlib{malloc\}(size);
+    \stdlib{strcpy\}(out, strs[\number{0\}]);
+    \keyword{for\} (i=\number{1\};i<\number{3\};i++) {
+      \stdlib{strcat\}(out, \string{","\});
+      \stdlib{strcat\}(out, strs[i]);
+    }
+C++:
+  body: |-
+    \comment{// one-liner\}
+    \stdlib{vector\}<\stdlib{string\}> strs = {\string{"one"\}, \string{"two"\}, \string{"three"\}};
+    \stdlib{string\} out = \stdlib{accumulate\}(\stdlib{next\}(strs.\stdlib{begin\}()), strs.\stdlib{end\}(), strs[0],
+      [](\keyword{const\} \stdlib{string\} &a, \keyword{const\} \stdlib{string\} &b) {
+        \keyword{return\} a + \string{","\} + b;
+      });
+    \hr{\}
+    \comment{// prevent reallocation\}
+    \stdlib{vector\}<\stdlib{string\}> strs = {\string{"one"\}, \string{"two"\}, \string{"three"\}};
+    \stdlib{ostringstream\} os;
+    \stdlib{copy\}(strs.\stdlib{begin\}(), strs.\stdlib{end\}()-1, \stdlib{ostream_iterator\}<\stdlib{string\}>(os, \string{","\}));
+    os << *strs.\stdlib{rbegin\}();
+    \stdlib{string\} out = os.\stdlib{str\}();
+CoffeeScript:
+  body: |-
+    strs = [\string{'one'\},\string{'two'\},\string{'three'\}]
+    out = strs.\stdlib{join\} \string{','\}
+Java:
+  body: |-
+    \comment{// Java 8\}
+    \stdlib{List\}<\stdlib{String\}> strs = \stdlib{Arrays\}.\stdlib{asList\}(\string{"one"\}, \string{"two"\}, \string{"three"\});
+    \stdlib{String\} out = \stdlib{String\}.\stdlib{join\}(\string{","\}, strs);
+    \hr{\}
+    \comment{// Java 7 and below\}
+    \stdlib{String\}[] strs = {\string{"one"\}, \string{"two"\}, \string{"three"\}};
+    \stdlib{StringBuilder\} sb = new \stdlib{StringBuilder\}();
+    \keyword{boolean\} first = \keyword{true\};
+    for (\stdlib{String\} str : strs) {
+      \keyword{if\} (first) {
+        first = \keyword{false\};
+      } \keyword{else\} {
+        sb.\stdlib{append\}(\string{","\});
+      }
+      sb.\stdlib{append\}(str);
+    }
+    \stdlib{String\} out = sb.\stdlib{toString\}();
+JavaScript:
+  body: |-
+    \keyword{let\} strs = [\string{'one'\},\string{'two'\},\string{'three'\}]
+    \keyword{let\} out = strs.\stdlib{join\}(\string{','\})
+Kotlin:
+  body: |-
+    \keyword{val\} strs = \stdlib{arrayOf\}(\string{"one"\}, \string{"two"\}, \string{"three"\})
+    \keyword{val\} out = strs.\stdlib{joinToString\}(\string{","\})
 Objective-C:
   body: |-
-    NSArray *a = @[\string{@"a"\}, \string{@"b"\}, \string{@"c"\}];
-    [a componentsJoinedByString:\string{@","\}];
+    \stdlib{NSArray\} *strs = @[\string{@"one"\}, \string{@"two"\}, \string{@"three"\}];
+    \stdlib{NSString\} *out = [strs \stdlib{componentsJoinedByString\}:\string{@","\}];
+Lua:
+  body: |-
+    strs = {\string{"one"\}, \string{"two"\}, \string{"three"\}}
+    \stdlib{table\}.\stdlib{concat\}(strs, \string{","\})
+Perl:
+  body: |-
+    @strs = \keyword{qw\}(\string{one\} \string{two\} \string{three\});
+    $out = \stdlib{join\} \string{','\}, @strs;
+PHP:
+  body: |-
+    $strs = \keyword{array\}(\string{'one'\}, \string{'two'\}, \string{'three'\});
+    $out = \stdlib{implode\}(\string{','\}, $strs);
+Python:
+  body: |-
+    strs = [\string{'one'\},\string{'two'\},\string{'three'\}]
+    \string{','\}.\stdlib{join\}(strs)
+Ruby:
+  body: |-
+    strs = %w(\string{one\} \string{two\} \string{three\})
+    out = strs.\stdlib{join\} \string{','\}
+Swift:
+  body: |-
+    \keyword{let\} strs = [\string{"one"\}, \string{"two"\}, \string{"three"\}]
+    \keyword{let\} out = strs.\stdlib{joined\}(\stdlib{separator\}: \string{","\})
