@@ -101,6 +101,10 @@ if generate_single_item
       console.log "  <div class='panel-body'>"
       console.log "    #{body}"
       console.log "  </div>"
+      if content.note
+        console.log "  <div class='panel-footer'>"
+        console.log "    #{content.note}"
+        console.log "  </div>"
       console.log "</div>"
       console.log ""
   console.log "</div>"
