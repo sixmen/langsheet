@@ -3,8 +3,7 @@ C:
   body: |-
     \keyword{const\} \keyword{char\} *s1 = \string{"hello"\};
     \keyword{const\} \keyword{char\} *s2 = \string{" world"\};
-    \keyword{char\} *s3 = (\keyword{char\} *)\stdlib{malloc\}(\stdlib{strlen\}(s1)
-        +\stdlib{strlen\}(s2)+\number{1\});
+    \keyword{char\} *s3 = (\keyword{char\} *)\stdlib{malloc\}(\stdlib{strlen\}(s1)+\stdlib{strlen\}(s2)+\number{1\});
     \stdlib{strcpy\}(s3, s1);
     \stdlib{strcat\}(s3, s2);
 C++:

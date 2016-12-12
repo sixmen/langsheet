@@ -29,6 +29,11 @@ C++:
     \stdlib{copy\}(strs.\stdlib{begin\}(), strs.\stdlib{end\}()-1, \stdlib{ostream_iterator\}<\stdlib{string\}>(os, \string{","\}));
     os << *strs.\stdlib{rbegin\}();
     \stdlib{string\} out = os.\stdlib{str\}();
+  note: |-
+    #include &lt;algorithm&gt; // copy<br>
+    #include &lt;iterator&gt; // next, ostream_iterator<br>
+    #include &lt;numeric&gt; // accumulate<br>
+    #include &lt;sstream&gt; // ostringstream
 CoffeeScript:
   body: |-
     strs = [\string{'one'\},\string{'two'\},\string{'three'\}]
@@ -60,14 +65,14 @@ Kotlin:
   body: |-
     \keyword{val\} strs = \stdlib{arrayOf\}(\string{"one"\}, \string{"two"\}, \string{"three"\})
     \keyword{val\} out = strs.\stdlib{joinToString\}(\string{","\})
-Objective-C:
-  body: |-
-    \stdlib{NSArray\} *strs = @[\string{@"one"\}, \string{@"two"\}, \string{@"three"\}];
-    \stdlib{NSString\} *out = [strs \stdlib{componentsJoinedByString\}:\string{@","\}];
 Lua:
   body: |-
     strs = {\string{"one"\}, \string{"two"\}, \string{"three"\}}
     \stdlib{table\}.\stdlib{concat\}(strs, \string{","\})
+Objective-C:
+  body: |-
+    \stdlib{NSArray\} *strs = @[\string{@"one"\}, \string{@"two"\}, \string{@"three"\}];
+    \stdlib{NSString\} *out = [strs \stdlib{componentsJoinedByString\}:\string{@","\}];
 Perl:
   body: |-
     @strs = \keyword{qw\}(\string{one\} \string{two\} \string{three\});
