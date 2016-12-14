@@ -1,0 +1,155 @@
+_title: capturing group
+C:
+  body: |-
+    \keyword{const\} \keyword{char\} *str = \string{"2016-12-05"\};
+    \stdlib{regex_t\} rx;
+    \keyword{if\} (\stdlib{regcomp\}(&rx, "([[:digit:]]{4})-([[:digit:]]{2})-([[:digit:]]{2})", \stdlib{REG_EXTENDED\})==0) {
+      \stdlib{regmatch_t\} m[\number{4\}];
+      if (\stdlib{regexec\}(&rx, str, \number{4\}, m, \number{0\})==\number{0\}) {
+        \keyword{int\} year = str2int(str+m[\number{1\}].\stdlib{rm_so\}, m[\number{1\}].\stdlib{rm_eo\} - m[\number{1\}].\stdlib{rm_so\});
+        \keyword{int\} month = str2int(str+m[\number{2\}].\stdlib{rm_so\}, m[\number{2\}].\stdlib{rm_eo\} - m[\number{2\}].\stdlib{rm_so\});
+        \keyword{int\} day = str2int(str+m[\number{3\}].\stdlib{rm_so\}, m[\number{3\}].\stdlib{rm_eo\} - m[\number{3\}].\stdlib{rm_so\});
+      }
+      \stdlib{regfree\}(&rx);
+    }
+  note: |-
+    #include &lt;regex.h&gt;<br>
+    int str2int(const char *str, int len) {<br>
+      int value = 0;<br>
+      char *tmp = strndup(str, len);<br>
+      value = strtol(tmp, (char **)NULL, 10);<br>
+      free(tmp);<br>
+      return value;<br>
+    }
+C++:
+  body: |-
+    \stdlib{string\} str(\string{"2016-12-05"\});
+    \stdlib{regex\} rx(\string{"(\\\\d{4})-(\\\\d{2})-(\\\\d{2})"\});
+    \stdlib{smatch\} m;
+    \keyword{if\} (\stdlib{regex_match\}(str, m, rx)) {
+      \keyword{int\} year = \stdlib{stoi\}(m.\stdlib{str\}(\number{1\}));
+      \keyword{int\} month = \stdlib{stoi\}(m.\stdlib{str\}(\number{2\}));
+      \keyword{int\} day = \stdlib{stoi\}(m.\stdlib{str\}(\number{3\}));
+    }
+  note: |-
+    #include &lt;regex&gt;
+CoffeeScript:
+  body: |-
+    str = \string{'2016-12-05'\}
+    \keyword{if\} /(\\d{4})-(\\d{2})-(\\d{2})/.\stdlib{test\} str
+      year = \stdlib{Number\} \stdlib{RegExp\}.\stdlib{$1\}
+      month = \stdlib{Number\} \stdlib{RegExp\}.\stdlib{$2\}
+      day = \stdlib{Number\} \stdlib{RegExp\}.\stdlib{$3\}
+Java:
+  body: |-
+    \stdlib{String\} str = \string{"2016-12-05"\};
+    \stdlib{Pattern\} rx = \stdlib{Pattern\}.\stdlib{compile\}(\string{"(\\\\d{4})-(\\\\d{2})-(\\\\d{2})"\});
+    \stdlib{Matcher\} m = rx.\stdlib{matcher\}(str);
+    \keyword{if\} (m.\stdlib{matches\}()) {
+      \keyword{int\} year = \stdlib{Integer\}.\stdlib{parseInt\}(m.\stdlib{group\}(\number{1\}));
+      \keyword{int\} month = \stdlib{Integer\}.\stdlib{parseInt\}(m.\stdlib{group\}(\number{2\}));
+      \keyword{int\} day = \stdlib{Integer\}.\stdlib{parseInt\}(m.\stdlib{group\}(\number{3\}));
+    }
+  note: |-
+    import java.util.regex.Matcher;<br>
+    import java.util.regex.Pattern;
+JavaScript:
+  body: |-
+    \keyword{var\} str = \string{'2016-12-05'\};
+    \keyword{if\} (/(\\d{4})-(\\d{2})-(\\d{2})/.\stdlib{test\}(str)) {
+      \keyword{var\} year = \stdlib{Number\}(\stdlib{RegExp\}.\stdlib{$1\});
+      \keyword{var\} month = \stdlib{Number\}(\stdlib{RegExp\}.\stdlib{$2\});
+      \keyword{var\} day = \stdlib{Number\}(\stdlib{RegExp\}.\stdlib{$3\});
+    }
+Kotlin:
+  body: |-
+    \keyword{val\} str = \string{"2016-12-05"\}
+    \keyword{val\} rx = \string{"(\\\\d{4})-(\\\\d{2})-(\\\\d{2})"\}.\stdlib{toRegex\}()
+    \keyword{val\} m = rx.\stdlib{matchEntire\}(str)
+    \keyword{if\} (m!=null) {
+      \keyword{val\} year = m.\stdlib{groups\}[\number{1\}]!!.\stdlib{value\}.\stdlib{toInt\}()
+      \keyword{val\} month = m.\stdlib{groups\}[\number{2\}]!!.\stdlib{value\}.\stdlib{toInt\}()
+      \keyword{val\} day = m.\stdlib{groups\}[\number{3\}]!!.\stdlib{value\}.\stdlib{toInt\}()
+    }
+Lua:
+  body: |-
+    str = \string{'2016-12-05'\}
+    rx = \string{'(%d%d%d%d)-(%d%d)-(%d%d)'\}
+    year, month, day = \stdlib{string\}.\stdlib{match\}(str, rx)
+    year = \stdlib{tonumber\}(year)
+    month = \stdlib{tonumber\}(month)
+    day = \stdlib{tonumber\}(day)
+Objective-C:
+  body: |-
+    \stdlib{NSString\} *str = \string{@"2016-12-05"\};
+    \stdlib{NSRegularExpression\} *rx = [\stdlib{NSRegularExpression\} \stdlib{regularExpressionWithPattern\}:\string{@"(\\\\d{4})-(\\\\d{2})-(\\\\d{2})"\} \stdlib{options\}:\number{0\} \stdlib{error\}:\keyword{nil\}];
+    \stdlib{NSTextCheckingResult\} *m = [rx \stdlib{firstMatchInString\}:str \stdlib{options\}:\number{0\} \stdlib{range\}:\stdlib{NSMakeRange\}(\number{0\}, [str \stdlib{length\}])];
+    \keyword{if\} (m!=\keyword{nil\}) {
+      \keyword{NSInteger\} year = [[str \stdlib{substringWithRange\}:[m \stdlib{rangeAtIndex\}:\number{1\}]] \stdlib{integerValue\}];
+      \keyword{NSInteger\} month = [[str \stdlib{substringWithRange\}:[m \stdlib{rangeAtIndex\}:\number{2\}]] \stdlib{integerValue\}];
+      \keyword{NSInteger\} day = [[str \stdlib{substringWithRange\}:[m \stdlib{rangeAtIndex\}:\number{3\}]] \stdlib{integerValue\}];
+    }
+Perl:
+  body: |-
+    $str = \string{'2016-12-05'\};
+    $rx = \keyword{qr\}/(\\d{4})-(\\d{2})-(\\d{2})/;
+    \keyword{if\} ($str =~ $rx) {
+      ($year, $month, $day) = (\keyword{int\} $1, \keyword{int\} $2, \keyword{int\} $3);
+    }
+PHP:
+  body: |-
+    $str = \string{'2016-12-05'\};
+    $rx = \string{'/(\\d{4})-(\\d{2})-(\\d{2})/'\};
+    \keyword{if\} (\stdlib{preg_match\}($rx, $str, $m)) {
+      $year = (\keyword{int\})$m[\number{1\}];
+      $month = (\keyword{int\})$m[\number{2\}];
+      $day = (\keyword{int\})$m[\number{3\}];
+      \comment{// if you don't need integers\}
+      \keyword{list\}($_, $year, $month, $day) = $m;
+    }
+Python:
+  body: |-
+    str = \string{'2016-12-05'\}
+    rx = \string{'(\\\\d{4})-(\\\\d{2})-(\\\\d{2})'\}
+    m = \stdlib{re\}.\stdlib{search\}(rx, str)
+    \keyword{if\} m:
+      year = \stdlib{int\}(m.\stdlib{group\}(\number{1\}))
+      month = \stdlib{int\}(m.\stdlib{group\}(\number{2\}))
+      day = \stdlib{int\}(m.\stdlib{group\}(\number{3\}))
+      \comment{// if you don't need integers\}
+      year, month, day = m.\stdlib{groups\}()
+  note: |-
+    import re
+Ruby:
+  body: |-
+    \comment{// using method\}
+    str = \string{'2016-12-05'\}
+    rx = /(\\d{4})-(\\d{2})-(\\d{2})/
+    m = rx.\stdlib{match\}(str)
+    \keyword{if\} m
+      year = m[\number{1\}].\stdlib{to_i\}
+      month = m[\number{2\}].\stdlib{to_i\}
+      day = m[\number{3\}].\stdlib{to_i\}
+      \comment{// if you don't need integers\}
+      year, month, day = m[\number{1\}..\number{3\}]
+    end
+    \hr{\}
+    \comment{// using pattern-matching operator\}
+    str = \string{'2016-12-05'\}
+    rx = /(\\d{4})-(\\d{2})-(\\d{2})/
+    \keyword{if\} rx =~ str
+      year = $~[\number{1\}].\stdlib{to_i\}
+      month = $~[\number{2\}].\stdlib{to_i\}
+      day = $~[\number{3\}].\stdlib{to_i\}
+      \comment{// if you don't need integers\}
+      year, month, day = $~[\number{1\}..\number{3\}]
+    end
+Swift:
+  body: |-
+    \keyword{let\} str = \string{"2016-12-05"\}
+    \keyword{let\} rx = \keyword{try!\} \stdlib{NSRegularExpression\}(\stdlib{pattern\}: \string{"(\\\\d{4})-(\\\\d{2})-(\\\\d{2})"\}, \stdlib{options\}: [])
+    \keyword{if\} \keyword{let\} m = rx.\stdlib{firstMatch\}(\stdlib{in\}: str, \stdlib{options\}: [], \stdlib{range\}: \stdlib{NSRange\}(\stdlib{location\}: \number{0\}, \stdlib{length\}: (str \keyword{as\} \stdlib{NSString\}).\stdlib{length\})) {
+      \keyword{let\} year = \stdlib{Int\}((str \keyword{as\} \stdlib{NSString\}).\stdlib{substring\}(\stdlib{with\}: m.\stdlib{rangeAt\}(\number{1\})))
+      \keyword{let\} month = \stdlib{Int\}((str \keyword{as\} \stdlib{NSString\}).\stdlib{substring\}(\stdlib{with\}: m.\stdlib{rangeAt\}(\number{2\})))
+      \keyword{let\} day = \stdlib{Int\}((str \keyword{as\} \stdlib{NSString\}).\stdlib{substring\}(\stdlib{with\}: m.\stdlib{rangeAt\}(\number{3\})))
+    }

@@ -42,6 +42,7 @@
   items:
     - regular_expression/replace_first
     - regular_expression/replace_all
+    - regular_expression/capturing_group
 - title: date
   items:
     - date/current_unix_epoch
