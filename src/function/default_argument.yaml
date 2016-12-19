@@ -1,15 +1,22 @@
 _title: default argument
+C:
+  body: |-
+C++:
+  body: |-
+    \keyword{double\} logarithm(\keyword{double\} x, \keyword{double\} base=\number{10\}) {
+      \keyword{return\} \stdlib{log\}(x) / \stdlib{log\}(base);
+    }
 CoffeeScript:
   body: |-
     logarithm = (x, base=\number{10\}) ->
-      Math.log(x) / Math.log(base)
+      \stdlib{Math\}.\stdlib{log\}(x) / \stdlib{Math\}.\stdlib{log\}(base)
 Java:
   body: |-
     \keyword{double\} logarithm(\keyword{double\} x) {
       \keyword{return\} logarithm(x, \number{10\});
     }
     \keyword{double\} logarithm(\keyword{double\} x, \keyword{double\} base) {
-      \keyword{return\} Math.log(x) / Math.log(base);
+      \keyword{return\} \stdlib{Math\}.\stdlib{log\}(x) / \stdlib{Math\}.\stdlib{log\}(base);
     }
   note: |-
     use method overloading
@@ -19,5 +26,44 @@ JavaScript:
       \keyword{if\} (base==\keyword{null\}) {
         base = \number{10\};
       }
-      \keyword{return\} Math.log(x) / Math.log(base);
+      \keyword{return\} \stdlib{Math\}.\stdlib{log\}(x) / \stdlib{Math\}.\stdlib{log\}(base);
+    }
+Kotlin:
+  body: |-
+    \keyword{fun\} logarithm(x: \keyword{Double\}, base: \keyword{Double\}=\number{10.0\}): \keyword{Double\} {
+      \keyword{return\} \stdlib{Math\}.\stdlib{log\}(x) / \stdlib{Math\}.\stdlib{log\}(base)
+    }
+Objective-C:
+  body: |-
+Lua:
+  body: |-
+    \keyword{function\} logarithm(x, base)
+      base = base \keyword{or\} \number{10\}
+      \keyword{return\} \stdlib{math\}.\stdlib{log\}(x) / \stdlib{math\}.\stdlib{log\}(base)
+    \keyword{end}
+Perl:
+  body: |-
+    \keyword{sub\} logarithm {
+      \keyword{my\} $x = \keyword{shift\};
+      \keyword{my\} $base = \keyword{shift\} // \number{10\};
+      \stdlib{log\}($x) / \stdlib{log\}($base);
+    }
+PHP:
+  body: |-
+    \keyword{function\} logarithm($x, $base=\number{10\}) {
+      \keyword{return\} \stdlib{log\}($x) / \stdlib{log\}($base);
+    }
+Python:
+  body: |-
+    \keyword{def\} logarithm(x, base=\number{10\}):
+      \keyword{return\} \stdlib{math\}.\stdlib{log\}(x) / \stdlib{math\}.\stdlib{log\}(base)
+Ruby:
+  body: |-
+    \keyword{def\} logarithm(x, base=\number{10\})
+      \stdlib{Math\}.\stdlib{log\}(x) / \stdlib{Math\}.\stdlib{log\}(base)
+    \keyword{end\}
+Swift:
+  body: |-
+    \keyword{func\} logarithm(x: \keyword{Double\}, base: \keyword{Double\}=\number{10\}) -> \keyword{Double\} {
+      \keyword{return\} \stdlib{log\}(x) / \stdlib{log\}(base)
     }
