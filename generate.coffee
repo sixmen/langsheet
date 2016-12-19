@@ -96,7 +96,10 @@ if generate_single_item
   for language in languages
     getSheetContent groups[0].items[0], language, fn: (content) ->
       body = formatCode(content.body).string
-      console.log "<div class='panel panel-info'>"
+      type = 'info'
+      if content.cell_class.indexOf('not_applicable')>=0
+        type = 'warning'
+      console.log "<div class='panel panel-#{type}'>"
       console.log "  <div class='panel-heading'>#{language}</div>"
       console.log "  <div class='panel-body'>"
       console.log "    #{body}"
