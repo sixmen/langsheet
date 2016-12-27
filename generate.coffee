@@ -117,4 +117,4 @@ else
 
   template = require './template.handlebars'
   genearated = template languages: languages, table_columns: languages.length+1, groups: groups
-  fs.writeFileSync './gen/index.html', genearated, 'utf-8'
+  fs.writeFileSync './docs/index.html', genearated, 'utf-8'

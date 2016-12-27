@@ -1,0 +1,1957 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Language Sheet</title>
+  <link type='text/css' rel='stylesheet' href='index.css'>
+  <link type='text/css' rel='stylesheet' href='http://cdn.jsdelivr.net/qtip2/2.2.0/jquery.qtip.min.css'>
+</head>
+
+<body>
+
+<a href='https://github.com/sixmen/langsheet'><img style='position: absolute; top: 0; left: 0; border: 0;' src='https://s3.amazonaws.com/github/ribbons/forkme_left_green_007200.png' alt='Fork me on GitHub'></a>
+
+<ul id='select_lang'>
+  <li><input type='checkbox' value='0' checked data-name='C'>C</li>
+  <li><input type='checkbox' value='1' checked data-name='C++'>C++</li>
+  <li><input type='checkbox' value='2' checked data-name='CoffeeScript'>CoffeeScript</li>
+  <li><input type='checkbox' value='3' checked data-name='Java'>Java</li>
+  <li><input type='checkbox' value='4' checked data-name='JavaScript'>JavaScript</li>
+  <li><input type='checkbox' value='5' checked data-name='Kotlin'>Kotlin</li>
+  <li><input type='checkbox' value='6' checked data-name='Lua'>Lua</li>
+  <li><input type='checkbox' value='7' checked data-name='Objective-C'>Objective-C</li>
+  <li><input type='checkbox' value='8' checked data-name='OCaml'>OCaml</li>
+  <li><input type='checkbox' value='9' checked data-name='Perl'>Perl</li>
+  <li><input type='checkbox' value='10' checked data-name='PHP'>PHP</li>
+  <li><input type='checkbox' value='11' checked data-name='Python'>Python</li>
+  <li><input type='checkbox' value='12' checked data-name='Ruby'>Ruby</li>
+  <li><input type='checkbox' value='13' checked data-name='Scheme'>Scheme</li>
+  <li><input type='checkbox' value='14' checked data-name='Swift'>Swift</li>
+</ul>
+
+<table id='sheet'>
+  <tbody>
+    <tr class='group_title'>
+      <td colspan='16'>syntax</td>
+    </tr>
+    <tr class='language_list'>
+      <td></td>
+      <td>C</td>
+      <td>C++</td>
+      <td>CoffeeScript</td>
+      <td>Java</td>
+      <td>JavaScript</td>
+      <td>Kotlin</td>
+      <td>Lua</td>
+      <td>Objective-C</td>
+      <td>OCaml</td>
+      <td>Perl</td>
+      <td>PHP</td>
+      <td>Python</td>
+      <td>Ruby</td>
+      <td>Scheme</td>
+      <td>Swift</td>
+    </tr>
+    <tr class='item'>
+      <td class=''>
+        hello world
+      </td>
+      <td class=''>
+        <span class='cmd_preproc'>#include&nbsp;&lt;stdio.h&gt;</span><br><span class='cmd_keyword'>int</span>&nbsp;main(<span class='cmd_keyword'>int</span>&nbsp;argc,&nbsp;<span class='cmd_keyword'>char</span>&nbsp;**argv)&nbsp;{<br>&nbsp;&nbsp;printf(<span class='cmd_string'>"Hello,&nbsp;World!\n"</span>);<br>&nbsp;&nbsp;<span class='cmd_keyword'>return</span>&nbsp;<span class='cmd_number'>0</span>;<br>}
+      </td>
+      <td class=''>
+        <span class='cmd_preproc'>#include&nbsp;&lt;iostream&gt;</span><br><span class='cmd_keyword'>using</span>&nbsp;<span class='cmd_keyword'>namespace</span>&nbsp;std;<br><span class='cmd_keyword'>int</span>&nbsp;main(<span class='cmd_keyword'>int</span>&nbsp;argc,&nbsp;<span class='cmd_keyword'>char</span>&nbsp;**argv)&nbsp;{<br>&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;<span class='cmd_string'>"Hello,&nbsp;World!"</span>&nbsp;&lt;&lt;&nbsp;endl;<br>&nbsp;&nbsp;<span class='cmd_keyword'>return</span>&nbsp;<span class='cmd_number'>0</span>;<br>}
+      </td>
+      <td class=''>
+        console.log&nbsp;<span class='cmd_string'>'Hello,&nbsp;World!'</span>
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>public</span>&nbsp;<span class='cmd_keyword'>class</span>&nbsp;Hello&nbsp;{<br>&nbsp;&nbsp;<span class='cmd_keyword'>public</span>&nbsp;<span class='cmd_keyword'>static</span>&nbsp;<span class='cmd_keyword'>void</span>&nbsp;main(String[]&nbsp;args)&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class='cmd_string'>"Hello,&nbsp;World!"</span>);<br>&nbsp;&nbsp;}<br>}
+      </td>
+      <td class='item_note' title='&#x27;console.log&#x27; is for client-side(i.e. browser) JavaScript and Node.js.'>
+        console.log(<span class='cmd_string'>'Hello,&nbsp;World!'</span>);
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>print</span>(<span class='cmd_string'>'Hello,&nbsp;World!'</span>)
+      </td>
+      <td class=''>
+        <span class='cmd_preproc'>#import&nbsp;&lt;Foundation/Foundation.h&gt;</span><br><span class='cmd_keyword'>int</span>&nbsp;main(<span class='cmd_keyword'>int</span>&nbsp;argc,&nbsp;<span class='cmd_keyword'>char</span>&nbsp;**argv)&nbsp;{<br>&nbsp;&nbsp;NSLog(<span class='cmd_string'>@"Hello,&nbsp;World!"</span>);<br>&nbsp;&nbsp;<span class='cmd_keyword'>return</span>&nbsp;<span class='cmd_number'>0</span>;<br>}
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>print_endline</span>&nbsp;<span class='cmd_string'>"Hello,&nbsp;World!"</span>;;
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>print</span>&nbsp;<span class='cmd_string'>"Hello,&nbsp;World!\n"</span>;
+      </td>
+      <td class=''>
+        <span class='cmd_preproc'>&lt;?</span><br><span class='cmd_keyword'>echo</span>&nbsp;<span class='cmd_string'>"Hello,&nbsp;World!\n"</span>;<br><span class='cmd_preproc'>?&gt;</span>
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>print</span>&nbsp;<span class='cmd_string'>'Hello,&nbsp;World!'</span>
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        (<span class='cmd_keyword'>display</span>&nbsp;<span class='cmd_string'>"Hello,&nbsp;World!\n"</span>)
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+    </tr>
+    <tr class='item'>
+      <td class=''>
+        extensions
+      </td>
+      <td class=''>
+        .c&nbsp;-&nbsp;source<br>.h&nbsp;-&nbsp;header
+      </td>
+      <td class=''>
+        .cpp,&nbsp;.cc,&nbsp;.C,&nbsp;.cxx&nbsp;-&nbsp;source<br>.h,&nbsp;.hpp,&nbsp;.hh,&nbsp;.H,&nbsp;.hxx&nbsp;-&nbsp;header
+      </td>
+      <td class=''>
+        .coffee,&nbsp;.litcoffee
+      </td>
+      <td class=''>
+        .java&nbsp;-&nbsp;source<br>.class&nbsp;-&nbsp;compiled&nbsp;object
+      </td>
+      <td class=''>
+        .js
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        .lua
+      </td>
+      <td class=''>
+        .m&nbsp;-&nbsp;source<br>.mm&nbsp;-&nbsp;source&nbsp;with&nbsp;C++<br>.h&nbsp;-&nbsp;header
+      </td>
+      <td class=''>
+        .ml
+      </td>
+      <td class=''>
+        .pl
+      </td>
+      <td class=''>
+        .php
+      </td>
+      <td class=''>
+        .py
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        .scm
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+    </tr>
+    <tr class='item'>
+      <td class=''>
+        block delimiters
+      </td>
+      <td class=''>
+        {}
+      </td>
+      <td class=''>
+        {}
+      </td>
+      <td class=''>
+        indentation
+      </td>
+      <td class=''>
+        {}
+      </td>
+      <td class=''>
+        {}
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        {}
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        {}
+      </td>
+      <td class=''>
+        {}
+      </td>
+      <td class=''>
+        indentation
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        parentheses
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+    </tr>
+    <tr class='item'>
+      <td class=''>
+        statement terminator
+      </td>
+      <td class=''>
+        semicolon
+      </td>
+      <td class=''>
+        semicolon
+      </td>
+      <td class=''>
+        newline
+      </td>
+      <td class=''>
+        semicolon
+      </td>
+      <td class=''>
+        semicolon,&nbsp;but&nbsp;sometimes&nbsp;optional
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        newline&nbsp;or&nbsp;semicolon
+      </td>
+      <td class=''>
+        semicolon
+      </td>
+      <td class=''>
+        double&nbsp;semicolon
+      </td>
+      <td class=''>
+        semicolon
+      </td>
+      <td class=''>
+        semicolon
+      </td>
+      <td class=''>
+        newline
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        parentheses&nbsp;matching
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+    </tr>
+    <tr class='item'>
+      <td class=''>
+        import file/module
+      </td>
+      <td class=''>
+        <span class='cmd_preproc'>#include&nbsp;&lt;filename&gt;</span><br><span class='cmd_hr'></span><br><span class='cmd_preproc'>#include&nbsp;"filename"</span>
+      </td>
+      <td class=''>
+        <span class='cmd_preproc'>#include&nbsp;&lt;filename&gt;</span><br><span class='cmd_hr'></span><br><span class='cmd_preproc'>#include&nbsp;"filename"</span>
+      </td>
+      <td class='not_applicable'>
+        Not&nbsp;applicable<br>to&nbsp;this&nbsp;language
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>import</span>&nbsp;packagename.classname;<br><span class='cmd_hr'></span><br><span class='cmd_keyword'>import</span>&nbsp;packagename.*;
+      </td>
+      <td class='not_applicable'>
+        Not&nbsp;applicable<br>to&nbsp;this&nbsp;language
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+    </tr>
+    <tr class='item'>
+      <td class=''>
+        end-of-line comment
+      </td>
+      <td class=''>
+        <span class='cmd_comment'>//&nbsp;comment</span>
+      </td>
+      <td class=''>
+        <span class='cmd_comment'>//&nbsp;comment</span>
+      </td>
+      <td class=''>
+        <span class='cmd_comment'>#&nbsp;comment</span>
+      </td>
+      <td class=''>
+        <span class='cmd_comment'>//&nbsp;comment</span>
+      </td>
+      <td class=''>
+        <span class='cmd_comment'>//&nbsp;comment</span>
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        <span class='cmd_comment'>#&nbsp;comment</span>
+      </td>
+      <td class=''>
+        <span class='cmd_comment'>//&nbsp;comment</span><br><span class='cmd_hr'></span><br><span class='cmd_comment'>#&nbsp;comment</span>
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+    </tr>
+    <tr class='item'>
+      <td class=''>
+        block comment
+      </td>
+      <td class=''>
+        <span class='cmd_comment'>/*&nbsp;comment&nbsp;*/</span>
+      </td>
+      <td class=''>
+        <span class='cmd_comment'>/*&nbsp;comment&nbsp;*/</span>
+      </td>
+      <td class=''>
+        <span class='cmd_comment'>###<br>comment<br>###</span>
+      </td>
+      <td class=''>
+        <span class='cmd_comment'>/*&nbsp;comment&nbsp;*/</span>
+      </td>
+      <td class=''>
+        <span class='cmd_comment'>/*&nbsp;comment&nbsp;*/</span>
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='item_note' title='The POD(Plain Old Documentation) format is originally for documentation,
+but can be used for comments.
+&#x27;&#x3D;&#x27; must be the first character of a line.'>
+        <span class='cmd_comment'>=pod<br>comment<br>=cut</span>
+      </td>
+      <td class=''>
+        <span class='cmd_comment'>/*&nbsp;comment&nbsp;*/</span>
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr class='group_title'>
+      <td colspan='16'>variable</td>
+    </tr>
+    <tr class='language_list'>
+      <td></td>
+      <td>C</td>
+      <td>C++</td>
+      <td>CoffeeScript</td>
+      <td>Java</td>
+      <td>JavaScript</td>
+      <td>Kotlin</td>
+      <td>Lua</td>
+      <td>Objective-C</td>
+      <td>OCaml</td>
+      <td>Perl</td>
+      <td>PHP</td>
+      <td>Python</td>
+      <td>Ruby</td>
+      <td>Scheme</td>
+      <td>Swift</td>
+    </tr>
+    <tr class='item'>
+      <td class=''>
+        assignment
+      </td>
+      <td class=''>
+        a&nbsp;=&nbsp;<span class='cmd_number'>7</span>;
+      </td>
+      <td class=''>
+        a&nbsp;=&nbsp;<span class='cmd_number'>7</span>;
+      </td>
+      <td class=''>
+        a&nbsp;=&nbsp;<span class='cmd_number'>7</span>
+      </td>
+      <td class=''>
+        a&nbsp;=&nbsp;<span class='cmd_number'>7</span>;
+      </td>
+      <td class=''>
+        a&nbsp;=&nbsp;<span class='cmd_number'>7</span>;
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        a&nbsp;=&nbsp;<span class='cmd_number'>7</span>;
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        $a&nbsp;=&nbsp;<span class='cmd_number'>7</span>;
+      </td>
+      <td class=''>
+        $a&nbsp;=&nbsp;<span class='cmd_number'>7</span>;
+      </td>
+      <td class=''>
+        a&nbsp;=&nbsp;<span class='cmd_number'>7</span>
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+    </tr>
+    <tr class='item'>
+      <td class=''>
+        swap
+      </td>
+      <td class=''>
+        <span class='cmd_comment'>//&nbsp;basic</span><br>tmp&nbsp;=&nbsp;x;<br>x&nbsp;=&nbsp;y;<br>y&nbsp;=&nbsp;tmp;<br><span class='cmd_hr'></span><br><span class='cmd_comment'>//&nbsp;function</span><br><span class='cmd_keyword'>void</span>&nbsp;swap(<span class='cmd_keyword'>int</span>&nbsp;*a,&nbsp;<span class='cmd_keyword'>int</span>&nbsp;*b)&nbsp;{<br>&nbsp;&nbsp;<span class='cmd_keyword'>int</span>&nbsp;tmp;<br>&nbsp;&nbsp;tmp&nbsp;=&nbsp;*b;<br>&nbsp;&nbsp;*b&nbsp;=&nbsp;*a;<br>&nbsp;&nbsp;*a&nbsp;=&nbsp;tmp;<br>}<br>swap(&amp;x,&nbsp;&amp;y);<br><span class='cmd_hr'></span><br><span class='cmd_comment'>//&nbsp;no&nbsp;temporary&nbsp;variable</span><br>x&nbsp;=&nbsp;x&nbsp;+&nbsp;y;<br>y&nbsp;=&nbsp;x&nbsp;-&nbsp;y;<br>x&nbsp;=&nbsp;x&nbsp;-&nbsp;y;<br><span class='cmd_hr'></span><br><span class='cmd_comment'>//&nbsp;no&nbsp;temporary&nbsp;variable&nbsp;2</span><br>x&nbsp;=&nbsp;x&nbsp;^&nbsp;y;<br>y&nbsp;=&nbsp;x&nbsp;^&nbsp;y;<br>x&nbsp;=&nbsp;x&nbsp;^&nbsp;y;
+      </td>
+      <td class='item_note' title='#include &amp;lt;algorithm&amp;gt;'>
+        <span class='cmd_stdlib'>swap</span>(x,&nbsp;y);
+      </td>
+      <td class=''>
+        [x,&nbsp;y]&nbsp;=&nbsp;[y,&nbsp;x]
+      </td>
+      <td class=''>
+        tmp&nbsp;=&nbsp;x;<br>x&nbsp;=&nbsp;y;<br>y&nbsp;=&nbsp;tmp;
+      </td>
+      <td class=''>
+        <span class='cmd_comment'>//&nbsp;basic</span><br>tmp&nbsp;=&nbsp;x;<br>x&nbsp;=&nbsp;y;<br>y&nbsp;=&nbsp;tmp;<br><span class='cmd_hr'></span><br><span class='cmd_comment'>//&nbsp;tricky&nbsp;one-line</span><br>x&nbsp;=&nbsp;[y,&nbsp;y&nbsp;=&nbsp;x][<span class='cmd_number'>0</span>];<br><span class='cmd_hr'></span><br><span class='cmd_comment'>//&nbsp;ES2015&nbsp;(ES6)</span><br>[x,&nbsp;y]&nbsp;=&nbsp;[y,&nbsp;x]
+      </td>
+      <td class=''>
+        tmp&nbsp;=&nbsp;x<br>x&nbsp;=&nbsp;y<br>y&nbsp;=&nbsp;tmp
+      </td>
+      <td class=''>
+        x,&nbsp;y&nbsp;=&nbsp;y,&nbsp;x
+      </td>
+      <td class=''>
+        tmp&nbsp;=&nbsp;x;<br>x&nbsp;=&nbsp;y;<br>y&nbsp;=&nbsp;tmp;
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        ($x,&nbsp;$y)&nbsp;=&nbsp;($y,&nbsp;$x);
+      </td>
+      <td class=''>
+        <span class='cmd_comment'>//&nbsp;basic</span><br><span class='cmd_keyword'>list</span>($x,&nbsp;$y)&nbsp;=&nbsp;<span class='cmd_keyword'>array</span>($y,&nbsp;$x);<br><span class='cmd_hr'></span><br><span class='cmd_comment'>//&nbsp;function</span><br><span class='cmd_keyword'>function</span>&nbsp;swap(&amp;$x,&nbsp;&amp;$y)&nbsp;{<br>&nbsp;&nbsp;$tmp&nbsp;=&nbsp;$x;<br>&nbsp;&nbsp;$x&nbsp;=&nbsp;$y;<br>&nbsp;&nbsp;$y&nbsp;=&nbsp;$tmp;<br>}
+      </td>
+      <td class=''>
+        x,&nbsp;y&nbsp;=&nbsp;y,&nbsp;x
+      </td>
+      <td class=''>
+        x,&nbsp;y&nbsp;=&nbsp;y,&nbsp;x
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        <span class='cmd_stdlib'>swap</span>(&amp;x,&nbsp;&amp;y)
+      </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr class='group_title'>
+      <td colspan='16'>arithmetic</td>
+    </tr>
+    <tr class='language_list'>
+      <td></td>
+      <td>C</td>
+      <td>C++</td>
+      <td>CoffeeScript</td>
+      <td>Java</td>
+      <td>JavaScript</td>
+      <td>Kotlin</td>
+      <td>Lua</td>
+      <td>Objective-C</td>
+      <td>OCaml</td>
+      <td>Perl</td>
+      <td>PHP</td>
+      <td>Python</td>
+      <td>Ruby</td>
+      <td>Scheme</td>
+      <td>Swift</td>
+    </tr>
+    <tr class='item'>
+      <td class=''>
+        power
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        Math.pow(<span class='cmd_number'>2.5</span>,&nbsp;<span class='cmd_number'>13.2</span>);
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+    </tr>
+    <tr class='item'>
+      <td class=''>
+        square root
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        Math.sqrt(<span class='cmd_number'>1.69</span>);
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr class='group_title'>
+      <td colspan='16'>logic</td>
+    </tr>
+    <tr class='language_list'>
+      <td></td>
+      <td>C</td>
+      <td>C++</td>
+      <td>CoffeeScript</td>
+      <td>Java</td>
+      <td>JavaScript</td>
+      <td>Kotlin</td>
+      <td>Lua</td>
+      <td>Objective-C</td>
+      <td>OCaml</td>
+      <td>Perl</td>
+      <td>PHP</td>
+      <td>Python</td>
+      <td>Ruby</td>
+      <td>Scheme</td>
+      <td>Swift</td>
+    </tr>
+    <tr class='item'>
+      <td class=''>
+        boolean type
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>int</span>
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>bool</span>
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>boolean</span>
+      </td>
+      <td class='not_applicable'>
+        Not&nbsp;applicable<br>to&nbsp;this&nbsp;language
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='not_applicable'>
+        Not&nbsp;applicable<br>to&nbsp;this&nbsp;language
+      </td>
+      <td class='not_applicable'>
+        Not&nbsp;applicable<br>to&nbsp;this&nbsp;language
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr class='group_title'>
+      <td colspan='16'>string</td>
+    </tr>
+    <tr class='language_list'>
+      <td></td>
+      <td>C</td>
+      <td>C++</td>
+      <td>CoffeeScript</td>
+      <td>Java</td>
+      <td>JavaScript</td>
+      <td>Kotlin</td>
+      <td>Lua</td>
+      <td>Objective-C</td>
+      <td>OCaml</td>
+      <td>Perl</td>
+      <td>PHP</td>
+      <td>Python</td>
+      <td>Ruby</td>
+      <td>Scheme</td>
+      <td>Swift</td>
+    </tr>
+    <tr class='item'>
+      <td class=''>
+        concatenate
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>const</span>&nbsp;<span class='cmd_keyword'>char</span>&nbsp;*s1&nbsp;=&nbsp;<span class='cmd_string'>"hello"</span>;<br><span class='cmd_keyword'>const</span>&nbsp;<span class='cmd_keyword'>char</span>&nbsp;*s2&nbsp;=&nbsp;<span class='cmd_string'>"&nbsp;world"</span>;<br><span class='cmd_keyword'>char</span>&nbsp;*s3&nbsp;=&nbsp;(<span class='cmd_keyword'>char</span>&nbsp;*)<span class='cmd_stdlib'>malloc</span>(<span class='cmd_stdlib'>strlen</span>(s1)+<span class='cmd_stdlib'>strlen</span>(s2)+<span class='cmd_number'>1</span>);<br><span class='cmd_stdlib'>strcpy</span>(s3,&nbsp;s1);<br><span class='cmd_stdlib'>strcat</span>(s3,&nbsp;s2);
+      </td>
+      <td class=''>
+        <span class='cmd_comment'>//&nbsp;destructive</span><br><span class='cmd_stdlib'>string</span>&nbsp;s1&nbsp;=&nbsp;<span class='cmd_string'>"hello"</span>;<br>s1&nbsp;+=&nbsp;<span class='cmd_string'>"&nbsp;world"</span>;<br><span class='cmd_hr'></span><br><span class='cmd_comment'>//&nbsp;non-destructive</span><br><span class='cmd_stdlib'>string</span>&nbsp;s1&nbsp;=&nbsp;<span class='cmd_string'>"hello"</span>;<br><span class='cmd_stdlib'>string</span>&nbsp;s2&nbsp;=&nbsp;s1&nbsp;+&nbsp;<span class='cmd_string'>"&nbsp;world"</span>;
+      </td>
+      <td class=''>
+        <span class='cmd_string'>'hello'</span>&nbsp;+&nbsp;<span class='cmd_string'>'&nbsp;world'</span>
+      </td>
+      <td class=''>
+        <span class='cmd_string'>"hello"</span>&nbsp;+&nbsp;<span class='cmd_string'>"&nbsp;world"</span>
+      </td>
+      <td class=''>
+        <span class='cmd_string'>'hello'</span>&nbsp;+&nbsp;<span class='cmd_string'>'&nbsp;world'</span>
+      </td>
+      <td class=''>
+        <span class='cmd_string'>"hello"</span>&nbsp;+&nbsp;<span class='cmd_string'>"&nbsp;world"</span>
+      </td>
+      <td class=''>
+        <span class='cmd_string'>'hello'</span>&nbsp;..&nbsp;<span class='cmd_string'>'&nbsp;world'</span>
+      </td>
+      <td class=''>
+        <span class='cmd_comment'>//&nbsp;destructive</span><br><span class='cmd_stdlib'>NSMutableString</span>&nbsp;*s1&nbsp;=&nbsp;[<span class='cmd_string'>@"hello"</span>&nbsp;<span class='cmd_stdlib'>mutableCopy</span>];<br>[s1&nbsp;<span class='cmd_stdlib'>appendString</span>:<span class='cmd_string'>@"&nbsp;world"</span>];<br><span class='cmd_hr'></span><br><span class='cmd_comment'>//&nbsp;non-destructive</span><br><span class='cmd_stdlib'>NSString</span>&nbsp;*s1&nbsp;=&nbsp;<span class='cmd_string'>@"hello"</span>;<br><span class='cmd_stdlib'>NSString</span>&nbsp;*s2&nbsp;=&nbsp;[s1&nbsp;<span class='cmd_stdlib'>stringByAppendingString</span>:<span class='cmd_string'>@"&nbsp;world"</span>];
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        <span class='cmd_string'>'hello'</span>&nbsp;.&nbsp;<span class='cmd_string'>'&nbsp;world'</span>
+      </td>
+      <td class=''>
+        <span class='cmd_string'>'hello'</span>&nbsp;.&nbsp;<span class='cmd_string'>'&nbsp;world'</span>
+      </td>
+      <td class=''>
+        <span class='cmd_string'>'hello'</span>&nbsp;+&nbsp;<span class='cmd_string'>'&nbsp;world'</span>
+      </td>
+      <td class=''>
+        <span class='cmd_string'>'hello'</span>&nbsp;+&nbsp;<span class='cmd_string'>'&nbsp;world'</span>
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        <span class='cmd_string'>"hello"</span>&nbsp;+&nbsp;<span class='cmd_string'>"&nbsp;world"</span>
+      </td>
+    </tr>
+    <tr class='item'>
+      <td class=''>
+        convert case
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        <span class='cmd_string'>"hello"</span>.toUpperCase();<br><span class='cmd_string'>"HELLO"</span>.toLowerCase();
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        [<span class='cmd_string'>@"hello"</span>&nbsp;uppercaseString];<br>[<span class='cmd_string'>@"HELLO"</span>&nbsp;lowercaseString];
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+    </tr>
+    <tr class='item'>
+      <td class=''>
+        trim
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        <span class='cmd_string'>"&nbsp;hello&nbsp;"</span>.trim();
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        [<span class='cmd_string'>@"&nbsp;hello&nbsp;"</span>&nbsp;stringByTrimmingCharactersInSet:[NSCharacterSet&nbsp;whitespaceCharacterSet]];
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+    </tr>
+    <tr class='item'>
+      <td class=''>
+        format string
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        [NSString&nbsp;stringWithFormat:<span class='cmd_string'>@"str-%@,&nbsp;int-%d,&nbsp;num-%f"</span>,&nbsp;<span class='cmd_string'>@"Lang"</span>,&nbsp;<span class='cmd_number'>5</span>,&nbsp;<span class='cmd_number'>9.4</span>];
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+    </tr>
+    <tr class='item'>
+      <td class=''>
+        join a string array
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>const</span>&nbsp;<span class='cmd_keyword'>char</span>&nbsp;*<span class='cmd_keyword'>const</span>&nbsp;strs[]&nbsp;=&nbsp;{<span class='cmd_string'>"one"</span>,&nbsp;<span class='cmd_string'>"two"</span>,&nbsp;<span class='cmd_string'>"three"</span>};<br><span class='cmd_keyword'>int</span>&nbsp;i&nbsp;=&nbsp;<span class='cmd_number'>0</span>;<br><span class='cmd_keyword'>int</span>&nbsp;size&nbsp;=&nbsp;<span class='cmd_number'>0</span>;<br><span class='cmd_keyword'>char</span>&nbsp;*out;<br><span class='cmd_keyword'>for</span>&nbsp;(i=<span class='cmd_number'>0</span>;i&lt;<span class='cmd_number'>3</span>;i++)&nbsp;{<br>&nbsp;&nbsp;size&nbsp;+=&nbsp;<span class='cmd_stdlib'>strlen</span>(strs[i])&nbsp;+&nbsp;<span class='cmd_number'>1</span>;<br>}<br>out&nbsp;=&nbsp;(<span class='cmd_keyword'>char</span>&nbsp;*)<span class='cmd_stdlib'>malloc</span>(size);<br><span class='cmd_stdlib'>strcpy</span>(out,&nbsp;strs[<span class='cmd_number'>0</span>]);<br><span class='cmd_keyword'>for</span>&nbsp;(i=<span class='cmd_number'>1</span>;i&lt;<span class='cmd_number'>3</span>;i++)&nbsp;{<br>&nbsp;&nbsp;<span class='cmd_stdlib'>strcat</span>(out,&nbsp;<span class='cmd_string'>","</span>);<br>&nbsp;&nbsp;<span class='cmd_stdlib'>strcat</span>(out,&nbsp;strs[i]);<br>}
+      </td>
+      <td class='item_note' title='#include &amp;lt;algorithm&amp;gt; // copy&lt;br&gt;
+#include &amp;lt;iterator&amp;gt; // next, ostream_iterator&lt;br&gt;
+#include &amp;lt;numeric&amp;gt; // accumulate&lt;br&gt;
+#include &amp;lt;sstream&amp;gt; // ostringstream'>
+        <span class='cmd_comment'>//&nbsp;one-liner</span><br><span class='cmd_stdlib'>vector</span>&lt;<span class='cmd_stdlib'>string</span>&gt;&nbsp;strs&nbsp;=&nbsp;{<span class='cmd_string'>"one"</span>,&nbsp;<span class='cmd_string'>"two"</span>,&nbsp;<span class='cmd_string'>"three"</span>};<br><span class='cmd_stdlib'>string</span>&nbsp;out&nbsp;=&nbsp;<span class='cmd_stdlib'>accumulate</span>(<span class='cmd_stdlib'>next</span>(strs.<span class='cmd_stdlib'>begin</span>()),&nbsp;strs.<span class='cmd_stdlib'>end</span>(),&nbsp;strs[0],<br>&nbsp;&nbsp;[](<span class='cmd_keyword'>const</span>&nbsp;<span class='cmd_stdlib'>string</span>&nbsp;&amp;a,&nbsp;<span class='cmd_keyword'>const</span>&nbsp;<span class='cmd_stdlib'>string</span>&nbsp;&amp;b)&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class='cmd_keyword'>return</span>&nbsp;a&nbsp;+&nbsp;<span class='cmd_string'>","</span>&nbsp;+&nbsp;b;<br>&nbsp;&nbsp;});<br><span class='cmd_hr'></span><br><span class='cmd_comment'>//&nbsp;prevent&nbsp;reallocation</span><br><span class='cmd_stdlib'>vector</span>&lt;<span class='cmd_stdlib'>string</span>&gt;&nbsp;strs&nbsp;=&nbsp;{<span class='cmd_string'>"one"</span>,&nbsp;<span class='cmd_string'>"two"</span>,&nbsp;<span class='cmd_string'>"three"</span>};<br><span class='cmd_stdlib'>ostringstream</span>&nbsp;os;<br><span class='cmd_stdlib'>copy</span>(strs.<span class='cmd_stdlib'>begin</span>(),&nbsp;strs.<span class='cmd_stdlib'>end</span>()-1,&nbsp;<span class='cmd_stdlib'>ostream_iterator</span>&lt;<span class='cmd_stdlib'>string</span>&gt;(os,&nbsp;<span class='cmd_string'>","</span>));<br>os&nbsp;&lt;&lt;&nbsp;*strs.<span class='cmd_stdlib'>rbegin</span>();<br><span class='cmd_stdlib'>string</span>&nbsp;out&nbsp;=&nbsp;os.<span class='cmd_stdlib'>str</span>();
+      </td>
+      <td class=''>
+        strs&nbsp;=&nbsp;[<span class='cmd_string'>'one'</span>,<span class='cmd_string'>'two'</span>,<span class='cmd_string'>'three'</span>]<br>out&nbsp;=&nbsp;strs.<span class='cmd_stdlib'>join</span>&nbsp;<span class='cmd_string'>','</span>
+      </td>
+      <td class=''>
+        <span class='cmd_comment'>//&nbsp;Java&nbsp;8</span><br><span class='cmd_stdlib'>List</span>&lt;<span class='cmd_stdlib'>String</span>&gt;&nbsp;strs&nbsp;=&nbsp;<span class='cmd_stdlib'>Arrays</span>.<span class='cmd_stdlib'>asList</span>(<span class='cmd_string'>"one"</span>,&nbsp;<span class='cmd_string'>"two"</span>,&nbsp;<span class='cmd_string'>"three"</span>);<br><span class='cmd_stdlib'>String</span>&nbsp;out&nbsp;=&nbsp;<span class='cmd_stdlib'>String</span>.<span class='cmd_stdlib'>join</span>(<span class='cmd_string'>","</span>,&nbsp;strs);<br><span class='cmd_hr'></span><br><span class='cmd_comment'>//&nbsp;Java&nbsp;7&nbsp;and&nbsp;below</span><br><span class='cmd_stdlib'>String</span>[]&nbsp;strs&nbsp;=&nbsp;{<span class='cmd_string'>"one"</span>,&nbsp;<span class='cmd_string'>"two"</span>,&nbsp;<span class='cmd_string'>"three"</span>};<br><span class='cmd_stdlib'>StringBuilder</span>&nbsp;sb&nbsp;=&nbsp;new&nbsp;<span class='cmd_stdlib'>StringBuilder</span>();<br><span class='cmd_keyword'>boolean</span>&nbsp;first&nbsp;=&nbsp;<span class='cmd_keyword'>true</span>;<br>for&nbsp;(<span class='cmd_stdlib'>String</span>&nbsp;str&nbsp;:&nbsp;strs)&nbsp;{<br>&nbsp;&nbsp;<span class='cmd_keyword'>if</span>&nbsp;(first)&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;first&nbsp;=&nbsp;<span class='cmd_keyword'>false</span>;<br>&nbsp;&nbsp;}&nbsp;<span class='cmd_keyword'>else</span>&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;sb.<span class='cmd_stdlib'>append</span>(<span class='cmd_string'>","</span>);<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;sb.<span class='cmd_stdlib'>append</span>(str);<br>}<br><span class='cmd_stdlib'>String</span>&nbsp;out&nbsp;=&nbsp;sb.<span class='cmd_stdlib'>toString</span>();
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>let</span>&nbsp;strs&nbsp;=&nbsp;[<span class='cmd_string'>'one'</span>,<span class='cmd_string'>'two'</span>,<span class='cmd_string'>'three'</span>]<br><span class='cmd_keyword'>let</span>&nbsp;out&nbsp;=&nbsp;strs.<span class='cmd_stdlib'>join</span>(<span class='cmd_string'>','</span>)
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>val</span>&nbsp;strs&nbsp;=&nbsp;<span class='cmd_stdlib'>arrayOf</span>(<span class='cmd_string'>"one"</span>,&nbsp;<span class='cmd_string'>"two"</span>,&nbsp;<span class='cmd_string'>"three"</span>)<br><span class='cmd_keyword'>val</span>&nbsp;out&nbsp;=&nbsp;strs.<span class='cmd_stdlib'>joinToString</span>(<span class='cmd_string'>","</span>)
+      </td>
+      <td class=''>
+        strs&nbsp;=&nbsp;{<span class='cmd_string'>"one"</span>,&nbsp;<span class='cmd_string'>"two"</span>,&nbsp;<span class='cmd_string'>"three"</span>}<br><span class='cmd_stdlib'>table</span>.<span class='cmd_stdlib'>concat</span>(strs,&nbsp;<span class='cmd_string'>","</span>)
+      </td>
+      <td class=''>
+        <span class='cmd_stdlib'>NSArray</span>&nbsp;*strs&nbsp;=&nbsp;@[<span class='cmd_string'>@"one"</span>,&nbsp;<span class='cmd_string'>@"two"</span>,&nbsp;<span class='cmd_string'>@"three"</span>];<br><span class='cmd_stdlib'>NSString</span>&nbsp;*out&nbsp;=&nbsp;[strs&nbsp;<span class='cmd_stdlib'>componentsJoinedByString</span>:<span class='cmd_string'>@","</span>];
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        @strs&nbsp;=&nbsp;<span class='cmd_keyword'>qw</span>(<span class='cmd_string'>one</span>&nbsp;<span class='cmd_string'>two</span>&nbsp;<span class='cmd_string'>three</span>);<br>$out&nbsp;=&nbsp;<span class='cmd_stdlib'>join</span>&nbsp;<span class='cmd_string'>','</span>,&nbsp;@strs;
+      </td>
+      <td class=''>
+        $strs&nbsp;=&nbsp;<span class='cmd_keyword'>array</span>(<span class='cmd_string'>'one'</span>,&nbsp;<span class='cmd_string'>'two'</span>,&nbsp;<span class='cmd_string'>'three'</span>);<br>$out&nbsp;=&nbsp;<span class='cmd_stdlib'>implode</span>(<span class='cmd_string'>','</span>,&nbsp;$strs);
+      </td>
+      <td class=''>
+        strs&nbsp;=&nbsp;[<span class='cmd_string'>'one'</span>,<span class='cmd_string'>'two'</span>,<span class='cmd_string'>'three'</span>]<br><span class='cmd_string'>','</span>.<span class='cmd_stdlib'>join</span>(strs)
+      </td>
+      <td class=''>
+        strs&nbsp;=&nbsp;%w(<span class='cmd_string'>one</span>&nbsp;<span class='cmd_string'>two</span>&nbsp;<span class='cmd_string'>three</span>)<br>out&nbsp;=&nbsp;strs.<span class='cmd_stdlib'>join</span>&nbsp;<span class='cmd_string'>','</span>
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>let</span>&nbsp;strs&nbsp;=&nbsp;[<span class='cmd_string'>"one"</span>,&nbsp;<span class='cmd_string'>"two"</span>,&nbsp;<span class='cmd_string'>"three"</span>]<br><span class='cmd_keyword'>let</span>&nbsp;out&nbsp;=&nbsp;strs.<span class='cmd_stdlib'>joined</span>(<span class='cmd_stdlib'>separator</span>:&nbsp;<span class='cmd_string'>","</span>)
+      </td>
+    </tr>
+    <tr class='item'>
+      <td class=''>
+        split a string
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        [<span class='cmd_string'>@"a,b,c"</span>&nbsp;componentsSeparatedByString:<span class='cmd_string'>@","</span>];
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr class='group_title'>
+      <td colspan='16'>function</td>
+    </tr>
+    <tr class='language_list'>
+      <td></td>
+      <td>C</td>
+      <td>C++</td>
+      <td>CoffeeScript</td>
+      <td>Java</td>
+      <td>JavaScript</td>
+      <td>Kotlin</td>
+      <td>Lua</td>
+      <td>Objective-C</td>
+      <td>OCaml</td>
+      <td>Perl</td>
+      <td>PHP</td>
+      <td>Python</td>
+      <td>Ruby</td>
+      <td>Scheme</td>
+      <td>Swift</td>
+    </tr>
+    <tr class='item'>
+      <td class=''>
+        define function
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>int</span>&nbsp;sum(<span class='cmd_keyword'>int</span>&nbsp;x,&nbsp;<span class='cmd_keyword'>int</span>&nbsp;y,&nbsp;<span class='cmd_keyword'>int</span>&nbsp;z)&nbsp;{<br>&nbsp;&nbsp;<span class='cmd_keyword'>return</span>&nbsp;x&nbsp;+&nbsp;y&nbsp;+&nbsp;z;<br>}
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>int</span>&nbsp;sum(<span class='cmd_keyword'>int</span>&nbsp;x,&nbsp;<span class='cmd_keyword'>int</span>&nbsp;y,&nbsp;<span class='cmd_keyword'>int</span>&nbsp;z)&nbsp;{<br>&nbsp;&nbsp;<span class='cmd_keyword'>return</span>&nbsp;x&nbsp;+&nbsp;y&nbsp;+&nbsp;z;<br>}
+      </td>
+      <td class=''>
+        sum&nbsp;=&nbsp;(x,&nbsp;y,&nbsp;z)&nbsp;-&gt;<br>&nbsp;&nbsp;x&nbsp;+&nbsp;y&nbsp;+&nbsp;z
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>int</span>&nbsp;sum(<span class='cmd_keyword'>int</span>&nbsp;x,&nbsp;<span class='cmd_keyword'>int</span>&nbsp;y,&nbsp;<span class='cmd_keyword'>int</span>&nbsp;z)&nbsp;{<br>&nbsp;&nbsp;<span class='cmd_keyword'>return</span>&nbsp;x&nbsp;+&nbsp;y&nbsp;+&nbsp;z;<br>}
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>function</span>&nbsp;sum(x,&nbsp;y,&nbsp;z)&nbsp;{<br>&nbsp;&nbsp;<span class='cmd_keyword'>return</span>&nbsp;x&nbsp;+&nbsp;y&nbsp;+&nbsp;z;<br>}<br><span class='cmd_hr'></span><br><span class='cmd_keyword'>var</span>&nbsp;sum&nbsp;=&nbsp;<span class='cmd_keyword'>function</span>&nbsp;(x,&nbsp;y,&nbsp;z)&nbsp;{<br>&nbsp;&nbsp;<span class='cmd_keyword'>return</span>&nbsp;x&nbsp;+&nbsp;y&nbsp;+&nbsp;z;<br>};
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>def</span>&nbsp;sum(x,&nbsp;y,&nbsp;z):<br>&nbsp;&nbsp;<span class='cmd_keyword'>return</span>&nbsp;x&nbsp;+&nbsp;y&nbsp;+&nbsp;z
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+    </tr>
+    <tr class='item'>
+      <td class=''>
+        invoke function
+      </td>
+      <td class=''>
+        sum(<span class='cmd_number'>1</span>,&nbsp;<span class='cmd_number'>2</span>,&nbsp;<span class='cmd_number'>3</span>);
+      </td>
+      <td class=''>
+        sum(<span class='cmd_number'>1</span>,&nbsp;<span class='cmd_number'>2</span>,&nbsp;<span class='cmd_number'>3</span>);
+      </td>
+      <td class=''>
+        sum&nbsp;<span class='cmd_number'>1</span>,&nbsp;<span class='cmd_number'>2</span>,&nbsp;<span class='cmd_number'>3</span><br><span class='cmd_hr'></span><br>sum(<span class='cmd_number'>1</span>,&nbsp;<span class='cmd_number'>2</span>,&nbsp;<span class='cmd_number'>3</span>)
+      </td>
+      <td class=''>
+        sum(<span class='cmd_number'>1</span>,&nbsp;<span class='cmd_number'>2</span>,&nbsp;<span class='cmd_number'>3</span>);
+      </td>
+      <td class=''>
+        sum(<span class='cmd_number'>1</span>,&nbsp;<span class='cmd_number'>2</span>,&nbsp;<span class='cmd_number'>3</span>);
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        sum(<span class='cmd_number'>1</span>,&nbsp;<span class='cmd_number'>2</span>,&nbsp;<span class='cmd_number'>3</span>)
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+    </tr>
+    <tr class='item'>
+      <td class=''>
+        default argument
+      </td>
+      <td class='not_applicable'>
+        Not&nbsp;applicable<br>to&nbsp;this&nbsp;language
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>double</span>&nbsp;logarithm(<span class='cmd_keyword'>double</span>&nbsp;x,&nbsp;<span class='cmd_keyword'>double</span>&nbsp;base=<span class='cmd_number'>10</span>)&nbsp;{<br>&nbsp;&nbsp;<span class='cmd_keyword'>return</span>&nbsp;<span class='cmd_stdlib'>log</span>(x)&nbsp;/&nbsp;<span class='cmd_stdlib'>log</span>(base);<br>}
+      </td>
+      <td class=''>
+        logarithm&nbsp;=&nbsp;(x,&nbsp;base=<span class='cmd_number'>10</span>)&nbsp;-&gt;<br>&nbsp;&nbsp;<span class='cmd_stdlib'>Math</span>.<span class='cmd_stdlib'>log</span>(x)&nbsp;/&nbsp;<span class='cmd_stdlib'>Math</span>.<span class='cmd_stdlib'>log</span>(base)
+      </td>
+      <td class='item_note' title='use method overloading'>
+        <span class='cmd_keyword'>double</span>&nbsp;logarithm(<span class='cmd_keyword'>double</span>&nbsp;x)&nbsp;{<br>&nbsp;&nbsp;<span class='cmd_keyword'>return</span>&nbsp;logarithm(x,&nbsp;<span class='cmd_number'>10</span>);<br>}<br><span class='cmd_keyword'>double</span>&nbsp;logarithm(<span class='cmd_keyword'>double</span>&nbsp;x,&nbsp;<span class='cmd_keyword'>double</span>&nbsp;base)&nbsp;{<br>&nbsp;&nbsp;<span class='cmd_keyword'>return</span>&nbsp;<span class='cmd_stdlib'>Math</span>.<span class='cmd_stdlib'>log</span>(x)&nbsp;/&nbsp;<span class='cmd_stdlib'>Math</span>.<span class='cmd_stdlib'>log</span>(base);<br>}
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>function</span>&nbsp;logarithm(x,&nbsp;base)&nbsp;{<br>&nbsp;&nbsp;<span class='cmd_keyword'>if</span>&nbsp;(base==<span class='cmd_keyword'>null</span>)&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;base&nbsp;=&nbsp;<span class='cmd_number'>10</span>;<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;<span class='cmd_keyword'>return</span>&nbsp;<span class='cmd_stdlib'>Math</span>.<span class='cmd_stdlib'>log</span>(x)&nbsp;/&nbsp;<span class='cmd_stdlib'>Math</span>.<span class='cmd_stdlib'>log</span>(base);<br>}
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>fun</span>&nbsp;logarithm(x:&nbsp;<span class='cmd_keyword'>Double</span>,&nbsp;base:&nbsp;<span class='cmd_keyword'>Double</span>=<span class='cmd_number'>10.0</span>):&nbsp;<span class='cmd_keyword'>Double</span>&nbsp;{<br>&nbsp;&nbsp;<span class='cmd_keyword'>return</span>&nbsp;<span class='cmd_stdlib'>Math</span>.<span class='cmd_stdlib'>log</span>(x)&nbsp;/&nbsp;<span class='cmd_stdlib'>Math</span>.<span class='cmd_stdlib'>log</span>(base)<br>}
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>function</span>&nbsp;logarithm(x,&nbsp;base)<br>&nbsp;&nbsp;base&nbsp;=&nbsp;base&nbsp;<span class='cmd_keyword'>or</span>&nbsp;<span class='cmd_number'>10</span><br>&nbsp;&nbsp;<span class='cmd_keyword'>return</span>&nbsp;<span class='cmd_stdlib'>math</span>.<span class='cmd_stdlib'>log</span>(x)&nbsp;/&nbsp;<span class='cmd_stdlib'>math</span>.<span class='cmd_stdlib'>log</span>(base)<br><span class='cmd_keyword'>end}
+      </td>
+      <td class='not_applicable'>
+        Not&nbsp;applicable<br>to&nbsp;this&nbsp;language
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>sub</span>&nbsp;logarithm&nbsp;{<br>&nbsp;&nbsp;<span class='cmd_keyword'>my</span>&nbsp;$x&nbsp;=&nbsp;<span class='cmd_keyword'>shift</span>;<br>&nbsp;&nbsp;<span class='cmd_keyword'>my</span>&nbsp;$base&nbsp;=&nbsp;<span class='cmd_keyword'>shift</span>&nbsp;//&nbsp;<span class='cmd_number'>10</span>;<br>&nbsp;&nbsp;<span class='cmd_stdlib'>log</span>($x)&nbsp;/&nbsp;<span class='cmd_stdlib'>log</span>($base);<br>}
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>function</span>&nbsp;logarithm($x,&nbsp;$base=<span class='cmd_number'>10</span>)&nbsp;{<br>&nbsp;&nbsp;<span class='cmd_keyword'>return</span>&nbsp;<span class='cmd_stdlib'>log</span>($x)&nbsp;/&nbsp;<span class='cmd_stdlib'>log</span>($base);<br>}
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>def</span>&nbsp;logarithm(x,&nbsp;base=<span class='cmd_number'>10</span>):<br>&nbsp;&nbsp;<span class='cmd_keyword'>return</span>&nbsp;<span class='cmd_stdlib'>math</span>.<span class='cmd_stdlib'>log</span>(x)&nbsp;/&nbsp;<span class='cmd_stdlib'>math</span>.<span class='cmd_stdlib'>log</span>(base)
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>def</span>&nbsp;logarithm(x,&nbsp;base=<span class='cmd_number'>10</span>)<br>&nbsp;&nbsp;<span class='cmd_stdlib'>Math</span>.<span class='cmd_stdlib'>log</span>(x)&nbsp;/&nbsp;<span class='cmd_stdlib'>Math</span>.<span class='cmd_stdlib'>log</span>(base)<br><span class='cmd_keyword'>end</span>
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>func</span>&nbsp;logarithm(x:&nbsp;<span class='cmd_keyword'>Double</span>,&nbsp;base:&nbsp;<span class='cmd_keyword'>Double</span>=<span class='cmd_number'>10</span>)&nbsp;-&gt;&nbsp;<span class='cmd_keyword'>Double</span>&nbsp;{<br>&nbsp;&nbsp;<span class='cmd_keyword'>return</span>&nbsp;<span class='cmd_stdlib'>log</span>(x)&nbsp;/&nbsp;<span class='cmd_stdlib'>log</span>(base)<br>}
+      </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr class='group_title'>
+      <td colspan='16'>control flow statement</td>
+    </tr>
+    <tr class='language_list'>
+      <td></td>
+      <td>C</td>
+      <td>C++</td>
+      <td>CoffeeScript</td>
+      <td>Java</td>
+      <td>JavaScript</td>
+      <td>Kotlin</td>
+      <td>Lua</td>
+      <td>Objective-C</td>
+      <td>OCaml</td>
+      <td>Perl</td>
+      <td>PHP</td>
+      <td>Python</td>
+      <td>Ruby</td>
+      <td>Scheme</td>
+      <td>Swift</td>
+    </tr>
+    <tr class='item'>
+      <td class=''>
+        if
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>if</span>&nbsp;(a&lt;b)&nbsp;{<br>&nbsp;&nbsp;order&nbsp;=&nbsp;<span class='cmd_number'>-1</span>;<br>}&nbsp;<span class='cmd_keyword'>else</span>&nbsp;<span class='cmd_keyword'>if</span>&nbsp;(a==b)&nbsp;{<br>&nbsp;&nbsp;order&nbsp;=&nbsp;<span class='cmd_number'>0</span>;<br>}&nbsp;<span class='cmd_keyword'>else</span>&nbsp;{<br>&nbsp;&nbsp;order&nbsp;=&nbsp;<span class='cmd_number'>1</span>;<br>}
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>if</span>&nbsp;(a&lt;b)&nbsp;{<br>&nbsp;&nbsp;order&nbsp;=&nbsp;<span class='cmd_number'>-1</span>;<br>}&nbsp;<span class='cmd_keyword'>else</span>&nbsp;<span class='cmd_keyword'>if</span>&nbsp;(a==b)&nbsp;{<br>&nbsp;&nbsp;order&nbsp;=&nbsp;<span class='cmd_number'>0</span>;<br>}&nbsp;<span class='cmd_keyword'>else</span>&nbsp;{<br>&nbsp;&nbsp;order&nbsp;=&nbsp;<span class='cmd_number'>1</span>;<br>}
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>if</span>&nbsp;(a&lt;b)&nbsp;{<br>&nbsp;&nbsp;order&nbsp;=&nbsp;<span class='cmd_number'>-1</span>;<br>}&nbsp;<span class='cmd_keyword'>else</span>&nbsp;<span class='cmd_keyword'>if</span>&nbsp;(a==b)&nbsp;{<br>&nbsp;&nbsp;order&nbsp;=&nbsp;<span class='cmd_number'>0</span>;<br>}&nbsp;<span class='cmd_keyword'>else</span>&nbsp;{<br>&nbsp;&nbsp;order&nbsp;=&nbsp;<span class='cmd_number'>1</span>;<br>}
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>if</span>&nbsp;(a&lt;b)&nbsp;{<br>&nbsp;&nbsp;order&nbsp;=&nbsp;<span class='cmd_number'>-1</span>;<br>}&nbsp;<span class='cmd_keyword'>else</span>&nbsp;<span class='cmd_keyword'>if</span>&nbsp;(a==b)&nbsp;{<br>&nbsp;&nbsp;order&nbsp;=&nbsp;<span class='cmd_number'>0</span>;<br>}&nbsp;<span class='cmd_keyword'>else</span>&nbsp;{<br>&nbsp;&nbsp;order&nbsp;=&nbsp;<span class='cmd_number'>1</span>;<br>}
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>if</span>&nbsp;($a&lt;$b)&nbsp;{<br>&nbsp;&nbsp;$order&nbsp;=&nbsp;<span class='cmd_number'>-1</span>;<br>}&nbsp;<span class='cmd_keyword'>elsif</span>&nbsp;($a==$b)&nbsp;{<br>&nbsp;&nbsp;$order&nbsp;=&nbsp;<span class='cmd_number'>0</span>;<br>}&nbsp;<span class='cmd_keyword'>else</span>&nbsp;{<br>&nbsp;&nbsp;$order&nbsp;=&nbsp;<span class='cmd_number'>1</span>;<br>}
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>if</span>&nbsp;($a&lt;$b)&nbsp;{<br>&nbsp;&nbsp;$order&nbsp;=&nbsp;<span class='cmd_number'>-1</span>;<br>}&nbsp;<span class='cmd_keyword'>elseif</span>&nbsp;($a==$b)&nbsp;{<br>&nbsp;&nbsp;$order&nbsp;=&nbsp;<span class='cmd_number'>0</span>;<br>}&nbsp;<span class='cmd_keyword'>else</span>&nbsp;{<br>&nbsp;&nbsp;$order&nbsp;=&nbsp;<span class='cmd_number'>1</span>;<br>}
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr class='group_title'>
+      <td colspan='16'>resizable array</td>
+    </tr>
+    <tr class='language_list'>
+      <td></td>
+      <td>C</td>
+      <td>C++</td>
+      <td>CoffeeScript</td>
+      <td>Java</td>
+      <td>JavaScript</td>
+      <td>Kotlin</td>
+      <td>Lua</td>
+      <td>Objective-C</td>
+      <td>OCaml</td>
+      <td>Perl</td>
+      <td>PHP</td>
+      <td>Python</td>
+      <td>Ruby</td>
+      <td>Scheme</td>
+      <td>Swift</td>
+    </tr>
+    <tr class='item'>
+      <td class=''>
+        create
+      </td>
+      <td class='not_applicable'>
+        Not&nbsp;applicable<br>to&nbsp;this&nbsp;language
+      </td>
+      <td class=''>
+        <span class='cmd_preproc'>#include&nbsp;&lt;vector&gt;</span><br>std::vector&lt;<span class='cmd_keyword'>int</span>&gt;&nbsp;a;
+      </td>
+      <td class=''>
+        a&nbsp;=&nbsp;new&nbsp;Array()<br><span class='cmd_hr'></span><br>a&nbsp;=&nbsp;[]
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>import</span>&nbsp;java.util.ArrayList;<br>ArrayList&nbsp;a&nbsp;=&nbsp;new&nbsp;ArrayList();<br><span class='cmd_hr'></span><br><span class='cmd_comment'>//&nbsp;legacy&nbsp;class(slow&nbsp;due&nbsp;to&nbsp;synchronization)</span><br><span class='cmd_keyword'>import</span>&nbsp;java.util.Vector;<br>Vector&nbsp;a&nbsp;=&nbsp;new&nbsp;Vector();
+      </td>
+      <td class=''>
+        a&nbsp;=&nbsp;new&nbsp;Array();<br><span class='cmd_hr'></span><br>a&nbsp;=&nbsp;[];
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        @a&nbsp;=&nbsp;();
+      </td>
+      <td class=''>
+        $a&nbsp;=&nbsp;array();<br><span class='cmd_hr'></span><br>$a&nbsp;=&nbsp;[];
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+    </tr>
+    <tr class='item'>
+      <td class=''>
+        create with values
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='item_note' title='Caution: &#x27;new Array(3)&#x27; is different from &#x27;[3]&#x27;.'>
+        a&nbsp;=&nbsp;new&nbsp;Array(1,&nbsp;2,&nbsp;3)<br><span class='cmd_hr'></span><br>a&nbsp;=&nbsp;[1,&nbsp;2,&nbsp;3]
+      </td>
+      <td class='not_applicable'>
+        Not&nbsp;applicable<br>to&nbsp;this&nbsp;language
+      </td>
+      <td class='item_note' title='Caution: &#x27;new Array(3)&#x27; is different from &#x27;[3]&#x27;.'>
+        a&nbsp;=&nbsp;new&nbsp;Array(1,&nbsp;2,&nbsp;3);<br><span class='cmd_hr'></span><br>a&nbsp;=&nbsp;[1,&nbsp;2,&nbsp;3];
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr class='group_title'>
+      <td colspan='16'>regular expression</td>
+    </tr>
+    <tr class='language_list'>
+      <td></td>
+      <td>C</td>
+      <td>C++</td>
+      <td>CoffeeScript</td>
+      <td>Java</td>
+      <td>JavaScript</td>
+      <td>Kotlin</td>
+      <td>Lua</td>
+      <td>Objective-C</td>
+      <td>OCaml</td>
+      <td>Perl</td>
+      <td>PHP</td>
+      <td>Python</td>
+      <td>Ruby</td>
+      <td>Scheme</td>
+      <td>Swift</td>
+    </tr>
+    <tr class='item'>
+      <td class='item_note' title='&#x60;consonants&#x60; will be &quot;hllo&quot;.'>
+        replace first
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        String&nbsp;consonants&nbsp;=&nbsp;<span class='cmd_string'>"hello"</span>.replaceFirst(<span class='cmd_string'>"[aeiou]"</span>,&nbsp;<span class='cmd_string'>""</span>);<br><span class='cmd_hr'></span><br><span class='cmd_keyword'>import</span>&nbsp;java.util.regex.Pattern;<br>String&nbsp;consonants&nbsp;=&nbsp;Pattern.compile(<span class='cmd_string'>"[aeiou]"</span>).matcher(<span class='cmd_string'>"hello"</span>).replaceFirst(<span class='cmd_string'>""</span>);
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+    </tr>
+    <tr class='item'>
+      <td class='item_note' title='&#x60;consonants&#x60; will be &quot;hll&quot;.'>
+        replace all
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        String&nbsp;consonants&nbsp;=&nbsp;<span class='cmd_string'>"hello"</span>.replaceAll(<span class='cmd_string'>"[aeiou]"</span>,&nbsp;<span class='cmd_string'>""</span>);<br><span class='cmd_hr'></span><br><span class='cmd_keyword'>import</span>&nbsp;java.util.regex.Pattern;<br>String&nbsp;consonants&nbsp;=&nbsp;Pattern.compile(<span class='cmd_string'>"[aeiou]"</span>).matcher(<span class='cmd_string'>"hello"</span>).replaceAll(<span class='cmd_string'>""</span>);
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+    </tr>
+    <tr class='item'>
+      <td class=''>
+        capturing group
+      </td>
+      <td class='item_note' title='#include &amp;lt;regex.h&amp;gt;&lt;br&gt;
+int str2int(const char *str, int len) {&lt;br&gt;
+  int value &#x3D; 0;&lt;br&gt;
+  char *tmp &#x3D; strndup(str, len);&lt;br&gt;
+  value &#x3D; strtol(tmp, (char **)NULL, 10);&lt;br&gt;
+  free(tmp);&lt;br&gt;
+  return value;&lt;br&gt;
+}'>
+        <span class='cmd_keyword'>const</span>&nbsp;<span class='cmd_keyword'>char</span>&nbsp;*str&nbsp;=&nbsp;<span class='cmd_string'>"2016-12-05"</span>;<br><span class='cmd_stdlib'>regex_t</span>&nbsp;rx;<br><span class='cmd_keyword'>if</span>&nbsp;(<span class='cmd_stdlib'>regcomp</span>(&amp;rx,&nbsp;"([[:digit:]]{4})-([[:digit:]]{2})-([[:digit:]]{2})",&nbsp;<span class='cmd_stdlib'>REG_EXTENDED</span>)==0)&nbsp;{<br>&nbsp;&nbsp;<span class='cmd_stdlib'>regmatch_t</span>&nbsp;m[<span class='cmd_number'>4</span>];<br>&nbsp;&nbsp;if&nbsp;(<span class='cmd_stdlib'>regexec</span>(&amp;rx,&nbsp;str,&nbsp;<span class='cmd_number'>4</span>,&nbsp;m,&nbsp;<span class='cmd_number'>0</span>)==<span class='cmd_number'>0</span>)&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class='cmd_keyword'>int</span>&nbsp;year&nbsp;=&nbsp;str2int(str+m[<span class='cmd_number'>1</span>].<span class='cmd_stdlib'>rm_so</span>,&nbsp;m[<span class='cmd_number'>1</span>].<span class='cmd_stdlib'>rm_eo</span>&nbsp;-&nbsp;m[<span class='cmd_number'>1</span>].<span class='cmd_stdlib'>rm_so</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class='cmd_keyword'>int</span>&nbsp;month&nbsp;=&nbsp;str2int(str+m[<span class='cmd_number'>2</span>].<span class='cmd_stdlib'>rm_so</span>,&nbsp;m[<span class='cmd_number'>2</span>].<span class='cmd_stdlib'>rm_eo</span>&nbsp;-&nbsp;m[<span class='cmd_number'>2</span>].<span class='cmd_stdlib'>rm_so</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class='cmd_keyword'>int</span>&nbsp;day&nbsp;=&nbsp;str2int(str+m[<span class='cmd_number'>3</span>].<span class='cmd_stdlib'>rm_so</span>,&nbsp;m[<span class='cmd_number'>3</span>].<span class='cmd_stdlib'>rm_eo</span>&nbsp;-&nbsp;m[<span class='cmd_number'>3</span>].<span class='cmd_stdlib'>rm_so</span>);<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;<span class='cmd_stdlib'>regfree</span>(&amp;rx);<br>}
+      </td>
+      <td class='item_note' title='#include &amp;lt;regex&amp;gt;'>
+        <span class='cmd_stdlib'>string</span>&nbsp;str(<span class='cmd_string'>"2016-12-05"</span>);<br><span class='cmd_stdlib'>regex</span>&nbsp;rx(<span class='cmd_string'>"(\\d{4})-(\\d{2})-(\\d{2})"</span>);<br><span class='cmd_stdlib'>smatch</span>&nbsp;m;<br><span class='cmd_keyword'>if</span>&nbsp;(<span class='cmd_stdlib'>regex_match</span>(str,&nbsp;m,&nbsp;rx))&nbsp;{<br>&nbsp;&nbsp;<span class='cmd_keyword'>int</span>&nbsp;year&nbsp;=&nbsp;<span class='cmd_stdlib'>stoi</span>(m.<span class='cmd_stdlib'>str</span>(<span class='cmd_number'>1</span>));<br>&nbsp;&nbsp;<span class='cmd_keyword'>int</span>&nbsp;month&nbsp;=&nbsp;<span class='cmd_stdlib'>stoi</span>(m.<span class='cmd_stdlib'>str</span>(<span class='cmd_number'>2</span>));<br>&nbsp;&nbsp;<span class='cmd_keyword'>int</span>&nbsp;day&nbsp;=&nbsp;<span class='cmd_stdlib'>stoi</span>(m.<span class='cmd_stdlib'>str</span>(<span class='cmd_number'>3</span>));<br>}
+      </td>
+      <td class=''>
+        str&nbsp;=&nbsp;<span class='cmd_string'>'2016-12-05'</span><br><span class='cmd_keyword'>if</span>&nbsp;/(\d{4})-(\d{2})-(\d{2})/.<span class='cmd_stdlib'>test</span>&nbsp;str<br>&nbsp;&nbsp;year&nbsp;=&nbsp;<span class='cmd_stdlib'>Number</span>&nbsp;<span class='cmd_stdlib'>RegExp</span>.<span class='cmd_stdlib'>$1</span><br>&nbsp;&nbsp;month&nbsp;=&nbsp;<span class='cmd_stdlib'>Number</span>&nbsp;<span class='cmd_stdlib'>RegExp</span>.<span class='cmd_stdlib'>$2</span><br>&nbsp;&nbsp;day&nbsp;=&nbsp;<span class='cmd_stdlib'>Number</span>&nbsp;<span class='cmd_stdlib'>RegExp</span>.<span class='cmd_stdlib'>$3</span>
+      </td>
+      <td class='item_note' title='import java.util.regex.Matcher;&lt;br&gt;
+import java.util.regex.Pattern;'>
+        <span class='cmd_stdlib'>String</span>&nbsp;str&nbsp;=&nbsp;<span class='cmd_string'>"2016-12-05"</span>;<br><span class='cmd_stdlib'>Pattern</span>&nbsp;rx&nbsp;=&nbsp;<span class='cmd_stdlib'>Pattern</span>.<span class='cmd_stdlib'>compile</span>(<span class='cmd_string'>"(\\d{4})-(\\d{2})-(\\d{2})"</span>);<br><span class='cmd_stdlib'>Matcher</span>&nbsp;m&nbsp;=&nbsp;rx.<span class='cmd_stdlib'>matcher</span>(str);<br><span class='cmd_keyword'>if</span>&nbsp;(m.<span class='cmd_stdlib'>matches</span>())&nbsp;{<br>&nbsp;&nbsp;<span class='cmd_keyword'>int</span>&nbsp;year&nbsp;=&nbsp;<span class='cmd_stdlib'>Integer</span>.<span class='cmd_stdlib'>parseInt</span>(m.<span class='cmd_stdlib'>group</span>(<span class='cmd_number'>1</span>));<br>&nbsp;&nbsp;<span class='cmd_keyword'>int</span>&nbsp;month&nbsp;=&nbsp;<span class='cmd_stdlib'>Integer</span>.<span class='cmd_stdlib'>parseInt</span>(m.<span class='cmd_stdlib'>group</span>(<span class='cmd_number'>2</span>));<br>&nbsp;&nbsp;<span class='cmd_keyword'>int</span>&nbsp;day&nbsp;=&nbsp;<span class='cmd_stdlib'>Integer</span>.<span class='cmd_stdlib'>parseInt</span>(m.<span class='cmd_stdlib'>group</span>(<span class='cmd_number'>3</span>));<br>}
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>var</span>&nbsp;str&nbsp;=&nbsp;<span class='cmd_string'>'2016-12-05'</span>;<br><span class='cmd_keyword'>if</span>&nbsp;(/(\d{4})-(\d{2})-(\d{2})/.<span class='cmd_stdlib'>test</span>(str))&nbsp;{<br>&nbsp;&nbsp;<span class='cmd_keyword'>var</span>&nbsp;year&nbsp;=&nbsp;<span class='cmd_stdlib'>Number</span>(<span class='cmd_stdlib'>RegExp</span>.<span class='cmd_stdlib'>$1</span>);<br>&nbsp;&nbsp;<span class='cmd_keyword'>var</span>&nbsp;month&nbsp;=&nbsp;<span class='cmd_stdlib'>Number</span>(<span class='cmd_stdlib'>RegExp</span>.<span class='cmd_stdlib'>$2</span>);<br>&nbsp;&nbsp;<span class='cmd_keyword'>var</span>&nbsp;day&nbsp;=&nbsp;<span class='cmd_stdlib'>Number</span>(<span class='cmd_stdlib'>RegExp</span>.<span class='cmd_stdlib'>$3</span>);<br>}
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>val</span>&nbsp;str&nbsp;=&nbsp;<span class='cmd_string'>"2016-12-05"</span><br><span class='cmd_keyword'>val</span>&nbsp;rx&nbsp;=&nbsp;<span class='cmd_string'>"(\\d{4})-(\\d{2})-(\\d{2})"</span>.<span class='cmd_stdlib'>toRegex</span>()<br><span class='cmd_keyword'>val</span>&nbsp;m&nbsp;=&nbsp;rx.<span class='cmd_stdlib'>matchEntire</span>(str)<br><span class='cmd_keyword'>if</span>&nbsp;(m!=null)&nbsp;{<br>&nbsp;&nbsp;<span class='cmd_keyword'>val</span>&nbsp;year&nbsp;=&nbsp;m.<span class='cmd_stdlib'>groups</span>[<span class='cmd_number'>1</span>]!!.<span class='cmd_stdlib'>value</span>.<span class='cmd_stdlib'>toInt</span>()<br>&nbsp;&nbsp;<span class='cmd_keyword'>val</span>&nbsp;month&nbsp;=&nbsp;m.<span class='cmd_stdlib'>groups</span>[<span class='cmd_number'>2</span>]!!.<span class='cmd_stdlib'>value</span>.<span class='cmd_stdlib'>toInt</span>()<br>&nbsp;&nbsp;<span class='cmd_keyword'>val</span>&nbsp;day&nbsp;=&nbsp;m.<span class='cmd_stdlib'>groups</span>[<span class='cmd_number'>3</span>]!!.<span class='cmd_stdlib'>value</span>.<span class='cmd_stdlib'>toInt</span>()<br>}
+      </td>
+      <td class=''>
+        str&nbsp;=&nbsp;<span class='cmd_string'>'2016-12-05'</span><br>rx&nbsp;=&nbsp;<span class='cmd_string'>'(%d%d%d%d)-(%d%d)-(%d%d)'</span><br>year,&nbsp;month,&nbsp;day&nbsp;=&nbsp;<span class='cmd_stdlib'>string</span>.<span class='cmd_stdlib'>match</span>(str,&nbsp;rx)<br>year&nbsp;=&nbsp;<span class='cmd_stdlib'>tonumber</span>(year)<br>month&nbsp;=&nbsp;<span class='cmd_stdlib'>tonumber</span>(month)<br>day&nbsp;=&nbsp;<span class='cmd_stdlib'>tonumber</span>(day)
+      </td>
+      <td class=''>
+        <span class='cmd_stdlib'>NSString</span>&nbsp;*str&nbsp;=&nbsp;<span class='cmd_string'>@"2016-12-05"</span>;<br><span class='cmd_stdlib'>NSRegularExpression</span>&nbsp;*rx&nbsp;=&nbsp;[<span class='cmd_stdlib'>NSRegularExpression</span>&nbsp;<span class='cmd_stdlib'>regularExpressionWithPattern</span>:<span class='cmd_string'>@"(\\d{4})-(\\d{2})-(\\d{2})"</span>&nbsp;<span class='cmd_stdlib'>options</span>:<span class='cmd_number'>0</span>&nbsp;<span class='cmd_stdlib'>error</span>:<span class='cmd_keyword'>nil</span>];<br><span class='cmd_stdlib'>NSTextCheckingResult</span>&nbsp;*m&nbsp;=&nbsp;[rx&nbsp;<span class='cmd_stdlib'>firstMatchInString</span>:str&nbsp;<span class='cmd_stdlib'>options</span>:<span class='cmd_number'>0</span>&nbsp;<span class='cmd_stdlib'>range</span>:<span class='cmd_stdlib'>NSMakeRange</span>(<span class='cmd_number'>0</span>,&nbsp;[str&nbsp;<span class='cmd_stdlib'>length</span>])];<br><span class='cmd_keyword'>if</span>&nbsp;(m!=<span class='cmd_keyword'>nil</span>)&nbsp;{<br>&nbsp;&nbsp;<span class='cmd_keyword'>NSInteger</span>&nbsp;year&nbsp;=&nbsp;[[str&nbsp;<span class='cmd_stdlib'>substringWithRange</span>:[m&nbsp;<span class='cmd_stdlib'>rangeAtIndex</span>:<span class='cmd_number'>1</span>]]&nbsp;<span class='cmd_stdlib'>integerValue</span>];<br>&nbsp;&nbsp;<span class='cmd_keyword'>NSInteger</span>&nbsp;month&nbsp;=&nbsp;[[str&nbsp;<span class='cmd_stdlib'>substringWithRange</span>:[m&nbsp;<span class='cmd_stdlib'>rangeAtIndex</span>:<span class='cmd_number'>2</span>]]&nbsp;<span class='cmd_stdlib'>integerValue</span>];<br>&nbsp;&nbsp;<span class='cmd_keyword'>NSInteger</span>&nbsp;day&nbsp;=&nbsp;[[str&nbsp;<span class='cmd_stdlib'>substringWithRange</span>:[m&nbsp;<span class='cmd_stdlib'>rangeAtIndex</span>:<span class='cmd_number'>3</span>]]&nbsp;<span class='cmd_stdlib'>integerValue</span>];<br>}
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        $str&nbsp;=&nbsp;<span class='cmd_string'>'2016-12-05'</span>;<br>$rx&nbsp;=&nbsp;<span class='cmd_keyword'>qr</span>/(\d{4})-(\d{2})-(\d{2})/;<br><span class='cmd_keyword'>if</span>&nbsp;($str&nbsp;=~&nbsp;$rx)&nbsp;{<br>&nbsp;&nbsp;($year,&nbsp;$month,&nbsp;$day)&nbsp;=&nbsp;(<span class='cmd_keyword'>int</span>&nbsp;$1,&nbsp;<span class='cmd_keyword'>int</span>&nbsp;$2,&nbsp;<span class='cmd_keyword'>int</span>&nbsp;$3);<br>}
+      </td>
+      <td class=''>
+        $str&nbsp;=&nbsp;<span class='cmd_string'>'2016-12-05'</span>;<br>$rx&nbsp;=&nbsp;<span class='cmd_string'>'/(\d{4})-(\d{2})-(\d{2})/'</span>;<br><span class='cmd_keyword'>if</span>&nbsp;(<span class='cmd_stdlib'>preg_match</span>($rx,&nbsp;$str,&nbsp;$m))&nbsp;{<br>&nbsp;&nbsp;$year&nbsp;=&nbsp;(<span class='cmd_keyword'>int</span>)$m[<span class='cmd_number'>1</span>];<br>&nbsp;&nbsp;$month&nbsp;=&nbsp;(<span class='cmd_keyword'>int</span>)$m[<span class='cmd_number'>2</span>];<br>&nbsp;&nbsp;$day&nbsp;=&nbsp;(<span class='cmd_keyword'>int</span>)$m[<span class='cmd_number'>3</span>];<br>&nbsp;&nbsp;<span class='cmd_comment'>//&nbsp;if&nbsp;you&nbsp;don't&nbsp;need&nbsp;integers</span><br>&nbsp;&nbsp;<span class='cmd_keyword'>list</span>($_,&nbsp;$year,&nbsp;$month,&nbsp;$day)&nbsp;=&nbsp;$m;<br>}
+      </td>
+      <td class='item_note' title='import re'>
+        str&nbsp;=&nbsp;<span class='cmd_string'>'2016-12-05'</span><br>rx&nbsp;=&nbsp;<span class='cmd_string'>'(\\d{4})-(\\d{2})-(\\d{2})'</span><br>m&nbsp;=&nbsp;<span class='cmd_stdlib'>re</span>.<span class='cmd_stdlib'>search</span>(rx,&nbsp;str)<br><span class='cmd_keyword'>if</span>&nbsp;m:<br>&nbsp;&nbsp;year&nbsp;=&nbsp;<span class='cmd_stdlib'>int</span>(m.<span class='cmd_stdlib'>group</span>(<span class='cmd_number'>1</span>))<br>&nbsp;&nbsp;month&nbsp;=&nbsp;<span class='cmd_stdlib'>int</span>(m.<span class='cmd_stdlib'>group</span>(<span class='cmd_number'>2</span>))<br>&nbsp;&nbsp;day&nbsp;=&nbsp;<span class='cmd_stdlib'>int</span>(m.<span class='cmd_stdlib'>group</span>(<span class='cmd_number'>3</span>))<br>&nbsp;&nbsp;<span class='cmd_comment'>//&nbsp;if&nbsp;you&nbsp;don't&nbsp;need&nbsp;integers</span><br>&nbsp;&nbsp;year,&nbsp;month,&nbsp;day&nbsp;=&nbsp;m.<span class='cmd_stdlib'>groups</span>()
+      </td>
+      <td class=''>
+        <span class='cmd_comment'>//&nbsp;using&nbsp;method</span><br>str&nbsp;=&nbsp;<span class='cmd_string'>'2016-12-05'</span><br>rx&nbsp;=&nbsp;/(\d{4})-(\d{2})-(\d{2})/<br>m&nbsp;=&nbsp;rx.<span class='cmd_stdlib'>match</span>(str)<br><span class='cmd_keyword'>if</span>&nbsp;m<br>&nbsp;&nbsp;year&nbsp;=&nbsp;m[<span class='cmd_number'>1</span>].<span class='cmd_stdlib'>to_i</span><br>&nbsp;&nbsp;month&nbsp;=&nbsp;m[<span class='cmd_number'>2</span>].<span class='cmd_stdlib'>to_i</span><br>&nbsp;&nbsp;day&nbsp;=&nbsp;m[<span class='cmd_number'>3</span>].<span class='cmd_stdlib'>to_i</span><br>&nbsp;&nbsp;<span class='cmd_comment'>//&nbsp;if&nbsp;you&nbsp;don't&nbsp;need&nbsp;integers</span><br>&nbsp;&nbsp;year,&nbsp;month,&nbsp;day&nbsp;=&nbsp;m[<span class='cmd_number'>1</span>..<span class='cmd_number'>3</span>]<br>end<br><span class='cmd_hr'></span><br><span class='cmd_comment'>//&nbsp;using&nbsp;pattern-matching&nbsp;operator</span><br>str&nbsp;=&nbsp;<span class='cmd_string'>'2016-12-05'</span><br>rx&nbsp;=&nbsp;/(\d{4})-(\d{2})-(\d{2})/<br><span class='cmd_keyword'>if</span>&nbsp;rx&nbsp;=~&nbsp;str<br>&nbsp;&nbsp;year&nbsp;=&nbsp;$~[<span class='cmd_number'>1</span>].<span class='cmd_stdlib'>to_i</span><br>&nbsp;&nbsp;month&nbsp;=&nbsp;$~[<span class='cmd_number'>2</span>].<span class='cmd_stdlib'>to_i</span><br>&nbsp;&nbsp;day&nbsp;=&nbsp;$~[<span class='cmd_number'>3</span>].<span class='cmd_stdlib'>to_i</span><br>&nbsp;&nbsp;<span class='cmd_comment'>//&nbsp;if&nbsp;you&nbsp;don't&nbsp;need&nbsp;integers</span><br>&nbsp;&nbsp;year,&nbsp;month,&nbsp;day&nbsp;=&nbsp;$~[<span class='cmd_number'>1</span>..<span class='cmd_number'>3</span>]<br>end
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>let</span>&nbsp;str&nbsp;=&nbsp;<span class='cmd_string'>"2016-12-05"</span><br><span class='cmd_keyword'>let</span>&nbsp;rx&nbsp;=&nbsp;<span class='cmd_keyword'>try!</span>&nbsp;<span class='cmd_stdlib'>NSRegularExpression</span>(<span class='cmd_stdlib'>pattern</span>:&nbsp;<span class='cmd_string'>"(\\d{4})-(\\d{2})-(\\d{2})"</span>,&nbsp;<span class='cmd_stdlib'>options</span>:&nbsp;[])<br><span class='cmd_keyword'>if</span>&nbsp;<span class='cmd_keyword'>let</span>&nbsp;m&nbsp;=&nbsp;rx.<span class='cmd_stdlib'>firstMatch</span>(<span class='cmd_stdlib'>in</span>:&nbsp;str,&nbsp;<span class='cmd_stdlib'>options</span>:&nbsp;[],&nbsp;<span class='cmd_stdlib'>range</span>:&nbsp;<span class='cmd_stdlib'>NSRange</span>(<span class='cmd_stdlib'>location</span>:&nbsp;<span class='cmd_number'>0</span>,&nbsp;<span class='cmd_stdlib'>length</span>:&nbsp;(str&nbsp;<span class='cmd_keyword'>as</span>&nbsp;<span class='cmd_stdlib'>NSString</span>).<span class='cmd_stdlib'>length</span>))&nbsp;{<br>&nbsp;&nbsp;<span class='cmd_keyword'>let</span>&nbsp;year&nbsp;=&nbsp;<span class='cmd_stdlib'>Int</span>((str&nbsp;<span class='cmd_keyword'>as</span>&nbsp;<span class='cmd_stdlib'>NSString</span>).<span class='cmd_stdlib'>substring</span>(<span class='cmd_stdlib'>with</span>:&nbsp;m.<span class='cmd_stdlib'>rangeAt</span>(<span class='cmd_number'>1</span>)))<br>&nbsp;&nbsp;<span class='cmd_keyword'>let</span>&nbsp;month&nbsp;=&nbsp;<span class='cmd_stdlib'>Int</span>((str&nbsp;<span class='cmd_keyword'>as</span>&nbsp;<span class='cmd_stdlib'>NSString</span>).<span class='cmd_stdlib'>substring</span>(<span class='cmd_stdlib'>with</span>:&nbsp;m.<span class='cmd_stdlib'>rangeAt</span>(<span class='cmd_number'>2</span>)))<br>&nbsp;&nbsp;<span class='cmd_keyword'>let</span>&nbsp;day&nbsp;=&nbsp;<span class='cmd_stdlib'>Int</span>((str&nbsp;<span class='cmd_keyword'>as</span>&nbsp;<span class='cmd_stdlib'>NSString</span>).<span class='cmd_stdlib'>substring</span>(<span class='cmd_stdlib'>with</span>:&nbsp;m.<span class='cmd_stdlib'>rangeAt</span>(<span class='cmd_number'>3</span>)))<br>}
+      </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr class='group_title'>
+      <td colspan='16'>date</td>
+    </tr>
+    <tr class='language_list'>
+      <td></td>
+      <td>C</td>
+      <td>C++</td>
+      <td>CoffeeScript</td>
+      <td>Java</td>
+      <td>JavaScript</td>
+      <td>Kotlin</td>
+      <td>Lua</td>
+      <td>Objective-C</td>
+      <td>OCaml</td>
+      <td>Perl</td>
+      <td>PHP</td>
+      <td>Python</td>
+      <td>Ruby</td>
+      <td>Scheme</td>
+      <td>Swift</td>
+    </tr>
+    <tr class='item'>
+      <td class='item_note' title='The Unix epoch is the time 00:00:00 UTC on 1 January 1970.'>
+        current date from Unix epoch in seconds
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>long</span>&nbsp;current&nbsp;=&nbsp;System.currentTimeMillis()&nbsp;/&nbsp;<span class='cmd_number'>1000</span>;<br><span class='cmd_hr'></span><br><span class='cmd_keyword'>import</span>&nbsp;java.util.Date;<br><span class='cmd_keyword'>long</span>&nbsp;current&nbsp;=&nbsp;<span class='cmd_keyword'>new</span>&nbsp;Date().getTime()&nbsp;/&nbsp;<span class='cmd_number'>1000</span>;
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr class='group_title'>
+      <td colspan='16'>object-oriented programming</td>
+    </tr>
+    <tr class='language_list'>
+      <td></td>
+      <td>C</td>
+      <td>C++</td>
+      <td>CoffeeScript</td>
+      <td>Java</td>
+      <td>JavaScript</td>
+      <td>Kotlin</td>
+      <td>Lua</td>
+      <td>Objective-C</td>
+      <td>OCaml</td>
+      <td>Perl</td>
+      <td>PHP</td>
+      <td>Python</td>
+      <td>Ruby</td>
+      <td>Scheme</td>
+      <td>Swift</td>
+    </tr>
+    <tr class='item'>
+      <td class=''>
+        define class
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>public</span>&nbsp;<span class='cmd_keyword'>class</span>&nbsp;Shape2D&nbsp;{<br>&nbsp;&nbsp;<span class='cmd_keyword'>private</span>&nbsp;<span class='cmd_keyword'>double</span>&nbsp;x;<br>&nbsp;&nbsp;<span class='cmd_keyword'>private</span>&nbsp;<span class='cmd_keyword'>double</span>&nbsp;y;<br>&nbsp;&nbsp;<span class='cmd_keyword'>public</span>&nbsp;Shape2D(<span class='cmd_keyword'>double</span>&nbsp;x,&nbsp;<span class='cmd_keyword'>double</span>&nbsp;y)&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;this.x&nbsp;=&nbsp;x;<br>&nbsp;&nbsp;&nbsp;&nbsp;this.y&nbsp;=&nbsp;y;<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;<span class='cmd_keyword'>public</span>&nbsp;<span class='cmd_keyword'>void</span>&nbsp;move(<span class='cmd_keyword'>double</span>&nbsp;dx,&nbsp;<span class='cmd_keyword'>double</span>&nbsp;dy)&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;+=&nbsp;dx;<br>&nbsp;&nbsp;&nbsp;&nbsp;y&nbsp;+=&nbsp;dy;<br>&nbsp;&nbsp;}<br>}
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+    </tr>
+    <tr class='item'>
+      <td class=''>
+        create object
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        Shape2D&nbsp;s&nbsp;=&nbsp;<span class='cmd_keyword'>new</span>&nbsp;Shape2D(<span class='cmd_number'>5</span>,&nbsp;<span class='cmd_number'>3</span>);
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+    </tr>
+    <tr class='item'>
+      <td class=''>
+        invoke method
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        s.move(<span class='cmd_number'>2</span>,&nbsp;<span class='cmd_number'>4</span>);
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+    </tr>
+    <tr class='item'>
+      <td class=''>
+        subclass
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        <span class='cmd_keyword'>public</span>&nbsp;<span class='cmd_keyword'>class</span>&nbsp;Circle&nbsp;<span class='cmd_keyword'>extends</span>&nbsp;Shape2D&nbsp;{<br>&nbsp;&nbsp;<span class='cmd_keyword'>private</span>&nbsp;<span class='cmd_keyword'>double</span>&nbsp;radius;<br>&nbsp;&nbsp;<span class='cmd_keyword'>public</span>&nbsp;Circle(<span class='cmd_keyword'>double</span>&nbsp;x,&nbsp;<span class='cmd_keyword'>double</span>&nbsp;y,&nbsp;<span class='cmd_keyword'>double</span>&nbsp;radius)&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class='cmd_keyword'>super</span>(x,&nbsp;y);<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class='cmd_keyword'>this</span>.radius&nbsp;=&nbsp;radius;<br>&nbsp;&nbsp;}<br>}
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+    </tr>
+    <tr class='item'>
+      <td class=''>
+        root class
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class=''>
+        java.lang.Object
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+      <td class='no_information'>
+        Need&nbsp;to&nbsp;fill
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<script src='http://code.jquery.com/jquery-1.10.2.min.js' type='text/javascript'></script>
+<script src='http://cdn.jsdelivr.net/qtip2/2.2.0/jquery.qtip.min.js' type='text/javascript'></script>
+<script src='index.js' type='text/javascript'></script>
+
+</body>
+
+</html>

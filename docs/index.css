@@ -1,0 +1,77 @@
+#sheet {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-family: monospace;
+  font-size: 1em;
+}
+#sheet td {
+  border: 1px solid #888888;
+  padding: 0.5em;
+}
+#sheet .language_list td {
+  background-color: #dddddd;
+  text-align: center;
+  font-weight: bold;
+}
+#sheet .group_title td {
+  background-color: #cccccc;
+  text-align: center;
+  font-weight: bold;
+}
+
+td.not_applicable {
+  background-color: #eeeeee;
+  text-align: center;
+  font-size: 0.4em;
+  color: #666666;
+}
+
+td.no_information {
+  background-color: #ffdddd;
+  text-align: center;
+  font-size: 0.4em;
+  color: #666666;
+}
+
+#select_lang {
+  margin-left: 100px;
+}
+#select_lang li {
+  list-style-type: none;
+  display: inline-block;
+  width: 100px;
+  font-size: 0.7em;
+}
+
+.cmd_hr {
+  display: block;
+  border-top: solid red 1px;
+  margin-top: 0.8em;
+  margin-bottom: -0.7em;
+}
+.cmd_comment {
+  color: #8e908c;
+}
+.cmd_keyword {
+  color: #a03fdf;
+}
+.cmd_stdlib {
+  color: #006fff;
+}
+.cmd_preproc {
+  color: #1364b4;
+}
+.cmd_string {
+  color: #ba2121;
+}
+.cmd_number {
+  color: #ba2121;
+}
+
+#sheet td.item_note {
+  background-color: #f8f8ff;
+}
+
+#sheet td.item_note:hover {
+  background-color: #f0f0ff;
+}
