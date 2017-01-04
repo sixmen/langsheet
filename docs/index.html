@@ -1623,53 +1623,54 @@ import java.util.regex.Pattern;'>
       <td>Swift</td>
     </tr>
     <tr class='item'>
-      <td class='item_note' title='The Unix epoch is the time 00:00:00 UTC on 1 January 1970.'>
-        current date from Unix epoch in seconds
+      <td class='item_note' title='The Unix time is the number of seconds
+since the Unix epoch, 1970-01-01 00:00:00 +0000 (UTC).'>
+        current Unix time
       </td>
-      <td class='no_information'>
-        Need&nbsp;to&nbsp;fill
+      <td class='item_note' title='#include &amp;lt;time.h&amp;gt;'>
+        <span class='cmd_stdlib'>time_t</span>&nbsp;now&nbsp;=&nbsp;<span class='cmd_stdlib'>time</span>(<span class='cmd_keyword'>NULL</span>);
       </td>
-      <td class='no_information'>
-        Need&nbsp;to&nbsp;fill
+      <td class='item_note' title='#include &amp;lt;ctime&amp;gt;'>
+        <span class='cmd_stdlib'>time_t</span>&nbsp;now&nbsp;=&nbsp;<span class='cmd_stdlib'>time</span>(<span class='cmd_keyword'>nullptr</span>);
+      </td>
+      <td class=''>
+        now&nbsp;=&nbsp;<span class='cmd_stdlib'>Date</span>.<span class='cmd_stdlib'>now</span>()&nbsp;/&nbsp;<span class='cmd_number'>1000</span><br><span class='cmd_hr'></span><br>now&nbsp;=&nbsp;<span class='cmd_keyword'>new</span>&nbsp;<span class='cmd_stdlib'>Date</span>().<span class='cmd_stdlib'>getTime</span>()&nbsp;/&nbsp;<span class='cmd_number'>1000</span>
+      </td>
+      <td class='item_note' title='import java.util.Date;'>
+        <span class='cmd_keyword'>long</span>&nbsp;now&nbsp;=&nbsp;<span class='cmd_stdlib'>System</span>.<span class='cmd_stdlib'>currentTimeMillis</span>()&nbsp;/&nbsp;<span class='cmd_number'>1000</span>;<br><span class='cmd_hr'></span><br><span class='cmd_keyword'>long</span>&nbsp;now&nbsp;=&nbsp;<span class='cmd_keyword'>new</span>&nbsp;<span class='cmd_stdlib'>Date</span>().<span class='cmd_stdlib'>getTime</span>()&nbsp;/&nbsp;<span class='cmd_number'>1000</span>;
+      </td>
+      <td class=''>
+        now&nbsp;=&nbsp;<span class='cmd_stdlib'>Date</span>.<span class='cmd_stdlib'>now</span>()&nbsp;/&nbsp;<span class='cmd_number'>1000</span>;<br><span class='cmd_hr'></span><br>now&nbsp;=&nbsp;<span class='cmd_keyword'>new</span>&nbsp;<span class='cmd_stdlib'>Date</span>().<span class='cmd_stdlib'>getTime</span>()&nbsp;/&nbsp;<span class='cmd_number'>1000</span>;
+      </td>
+      <td class='item_note' title='import java.util.Date'>
+        <span class='cmd_keyword'>val</span>&nbsp;now&nbsp;=&nbsp;<span class='cmd_stdlib'>System</span>.<span class='cmd_stdlib'>currentTimeMillis</span>()&nbsp;/&nbsp;<span class='cmd_number'>1000</span><br><span class='cmd_hr'></span><br><span class='cmd_keyword'>val</span>&nbsp;now&nbsp;=&nbsp;<span class='cmd_stdlib'>Date</span>().<span class='cmd_stdlib'>getTime</span>()/<span class='cmd_number'>1000</span>
+      </td>
+      <td class=''>
+        now&nbsp;=&nbsp;<span class='cmd_stdlib'>os</span>.<span class='cmd_stdlib'>time</span>()
+      </td>
+      <td class=''>
+        <span class='cmd_stdlib'>NSTimeInterval</span>&nbsp;now&nbsp;=&nbsp;[[<span class='cmd_stdlib'>NSDate</span>&nbsp;<span class='cmd_stdlib'>date</span>]&nbsp;<span class='cmd_stdlib'>timeIntervalSince1970</span>];
       </td>
       <td class='no_information'>
         Need&nbsp;to&nbsp;fill
       </td>
       <td class=''>
-        <span class='cmd_keyword'>long</span>&nbsp;current&nbsp;=&nbsp;System.currentTimeMillis()&nbsp;/&nbsp;<span class='cmd_number'>1000</span>;<br><span class='cmd_hr'></span><br><span class='cmd_keyword'>import</span>&nbsp;java.util.Date;<br><span class='cmd_keyword'>long</span>&nbsp;current&nbsp;=&nbsp;<span class='cmd_keyword'>new</span>&nbsp;Date().getTime()&nbsp;/&nbsp;<span class='cmd_number'>1000</span>;
+        $now&nbsp;=&nbsp;<span class='cmd_stdlib'>time</span>;
+      </td>
+      <td class=''>
+        $now&nbsp;=&nbsp;<span class='cmd_stdlib'>time</span>();
+      </td>
+      <td class='item_note' title='import time'>
+        <span class='cmd_stdib'>time</span>.<span class='cmd_stdlib'>time</span>()
+      </td>
+      <td class=''>
+        now&nbsp;=&nbsp;<span class='cmd_stdlib'>Time</span>.<span class='cmd_stdlib'>now</span>.<span class='cmd_stdlib'>to_i</span>
       </td>
       <td class='no_information'>
         Need&nbsp;to&nbsp;fill
       </td>
-      <td class='no_information'>
-        Need&nbsp;to&nbsp;fill
-      </td>
-      <td class='no_information'>
-        Need&nbsp;to&nbsp;fill
-      </td>
-      <td class='no_information'>
-        Need&nbsp;to&nbsp;fill
-      </td>
-      <td class='no_information'>
-        Need&nbsp;to&nbsp;fill
-      </td>
-      <td class='no_information'>
-        Need&nbsp;to&nbsp;fill
-      </td>
-      <td class='no_information'>
-        Need&nbsp;to&nbsp;fill
-      </td>
-      <td class='no_information'>
-        Need&nbsp;to&nbsp;fill
-      </td>
-      <td class='no_information'>
-        Need&nbsp;to&nbsp;fill
-      </td>
-      <td class='no_information'>
-        Need&nbsp;to&nbsp;fill
-      </td>
-      <td class='no_information'>
-        Need&nbsp;to&nbsp;fill
+      <td class=''>
+        <span class='cmd_keyword'>let</span>&nbsp;now&nbsp;=&nbsp;<span class='cmd_stdlib'>Date</span>().<span class='cmd_stdlib'>timeIntervalSince1970</span>
       </td>
     </tr>
   </tbody>

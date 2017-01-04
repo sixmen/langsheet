@@ -45,7 +45,7 @@
     - regular_expression/capturing_group
 - title: date
   items:
-    - date/current_unix_epoch
+    - date/current_unix_time
 - title: object-oriented programming
   items:
     - object/define_class

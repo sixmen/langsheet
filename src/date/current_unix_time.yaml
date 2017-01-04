@@ -1,0 +1,61 @@
+_title: current Unix time
+_note: |-
+  The Unix time is the number of seconds
+  since the Unix epoch, 1970-01-01 00:00:00 +0000 (UTC).
+C:
+  body: |-
+    \stdlib{time_t\} now = \stdlib{time\}(\keyword{NULL\});
+  note: |-
+    #include &lt;time.h&gt;
+C++:
+  body: |-
+    \stdlib{time_t\} now = \stdlib{time\}(\keyword{nullptr\});
+  note: |-
+    #include &lt;ctime&gt;
+CoffeeScript:
+  body: |-
+    now = \stdlib{Date\}.\stdlib{now\}() / \number{1000\}
+    \hr{\}
+    now = \keyword{new\} \stdlib{Date\}().\stdlib{getTime\}() / \number{1000\}
+Java:
+  body: |-
+    \keyword{long\} now = \stdlib{System\}.\stdlib{currentTimeMillis\}() / \number{1000\};
+    \hr{\}
+    \keyword{long\} now = \keyword{new\} \stdlib{Date\}().\stdlib{getTime\}() / \number{1000\};
+  note: |-
+    import java.util.Date;
+JavaScript:
+  body: |-
+    now = \stdlib{Date\}.\stdlib{now\}() / \number{1000\};
+    \hr{\}
+    now = \keyword{new\} \stdlib{Date\}().\stdlib{getTime\}() / \number{1000\};
+Kotlin:
+  body: |-
+    \keyword{val\} now = \stdlib{System\}.\stdlib{currentTimeMillis\}() / \number{1000\}
+    \hr{\}
+    \keyword{val\} now = \stdlib{Date\}().\stdlib{getTime\}()/\number{1000\}
+  note: |-
+    import java.util.Date
+Objective-C:
+  body: |-
+    \stdlib{NSTimeInterval\} now = [[\stdlib{NSDate\} \stdlib{date\}] \stdlib{timeIntervalSince1970\}];
+Lua:
+  body: |-
+    now = \stdlib{os\}.\stdlib{time\}()
+Perl:
+  body: |-
+    $now = \stdlib{time\};
+PHP:
+  body: |-
+    $now = \stdlib{time\}();
+Python:
+  body: |-
+    \stdib{time\}.\stdlib{time\}()
+  note: |-
+    import time
+Ruby:
+  body: |-
+    now = \stdlib{Time\}.\stdlib{now\}.\stdlib{to_i\}
+Swift:
+  body: |-
+    \keyword{let\} now = \stdlib{Date\}().\stdlib{timeIntervalSince1970\}
